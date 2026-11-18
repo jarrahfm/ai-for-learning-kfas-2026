@@ -29,25 +29,25 @@
     {nm:'Earth and Moon',W:1.0e6,f:'m',rate:1.2,hl:'moon',t:'Ellipse',
      d:'A closed curve: from any point on it, the distances to two inside points (the foci) always add up to the same total.',
      n:'The Moon\'s path is an ellipse; its average distance is <b>384,400 km</b>, about <b>30 Earths</b> side by side.',c:L(UK,OS+', ch. 3 key terms')+' · '+L(NM,'NASA Moon Facts')},
-    {nm:'The inner planets',W:3.4*AU,f:'s',rate:12,hl:'au',t:'Astronomical unit (AU)',
+    {nm:'The inner planets',W:5*AU,f:'s',rate:12,hl:'au',t:'Astronomical unit (AU)',
      d:'The average distance between Earth and the Sun.',
      n:'<b>1 AU = 149,597,870.7 km</b>, fixed exactly by the IAU in 2012. The Moon gap is only 0.0026 AU.',c:L(UK,OS+', ch. 3 key terms')+' · '+L(JC,'NASA JPL, Astrodynamic Parameters')},
-    {nm:'Mercury\'s orbit',W:1.15*AU,f:'s',rate:6,hl:'merc',t:'Semimajor axis and eccentricity',
+    {nm:'Mercury\'s orbit',W:2.2*AU,f:'s',rate:6,hl:'merc',t:'Semimajor axis and eccentricity',
      d:'Semimajor axis (a): half the widest diameter of the ellipse. Eccentricity (e): distance between the foci divided by the major axis.',
      n:'Mercury: <b>a = 0.387 AU</b>, <b>e = 0.206</b>, the most stretched of the eight planet orbits. The Sun sits at one focus.',c:L(U1,OS+', §3.1')+' · '+L(JA,'NASA JPL, Table 1')},
-    {nm:'Mars: near and far',W:4.0*AU,f:'s',rate:14,hl:'mars',t:'Perihelion and aphelion',
+    {nm:'Mars: near and far',W:8*AU,f:'s',rate:14,hl:'mars',t:'Perihelion and aphelion',
      d:'Perihelion: the point in an orbit nearest the Sun. Aphelion: the point farthest from the Sun.',
      n:'Mars: perihelion <b>1.38 AU</b>, aphelion <b>1.67 AU</b>, from a(1 &minus; e) and a(1 + e). Earth: 0.983 and 1.017 AU.',c:L(UK,OS+', ch. 3 key terms')+' · computed from '+L(JA,'NASA JPL a, e')},
-    {nm:'Sunlight on its way',W:2.6*AU,f:'s',rate:3,hl:'light',t:'Light-minute',
+    {nm:'Sunlight on its way',W:5.5*AU,f:'s',rate:3,hl:'light',t:'Light-minute',
      d:'The distance light travels in one minute: 299,792.458 km/s &times; 60 s.',
      n:'1 light-minute = <b>17,987,547 km</b>. Sunlight needs <b>499 s = 8.3 minutes</b> to cross 1 AU.',c:L(JC,'NASA JPL, Astrodynamic Parameters (c, au/c)')},
-    {nm:'Out to Jupiter',W:13*AU,f:'s',rate:160,hl:'jup',t:'Orbital period (P)',
+    {nm:'Out to Jupiter',W:26*AU,f:'s',rate:160,hl:'jup',t:'Orbital period (P)',
      d:'The time it takes a planet to travel once around the Sun.',
      n:'Jupiter: <b>P = 11.86 Earth years</b>, at a = 5.20 AU. Watch it crawl while the inner planets race.',c:L(U1,OS+', §3.1')+' · '+L(JP,'NASA JPL')},
-    {nm:'The outer planets',W:66*AU,f:'s',rate:9000,hl:'nep',t:'Kepler\'s third law',
+    {nm:'The outer planets',W:140*AU,f:'s',rate:9000,hl:'nep',t:'Kepler\'s third law',
      d:'The square of a planet\'s orbital period is proportional to the cube of its semimajor axis. In years and AU: P&sup2; = a&sup3;.',
      n:'Neptune: a = 30.07 AU, &radic;(30.07&sup3;) = <b>164.9 yr</b>; measured <b>164.79 yr</b>. Jupiter: &radic;(5.203&sup3;) = 11.87 vs 11.86.',c:L(U1,OS+', §3.1')+' · '+L(JP,'NASA JPL')+', '+L(JA,'Table 1')},
-    {nm:'The Sun, true size',W:3.7e6,f:'s',rate:0.3,hl:'sun',t:'The Sun\'s radius',
+    {nm:'The Sun, true size',W:4.6e6,f:'s',rate:0.3,hl:'sun',t:'The Sun\'s radius',
      d:'The Sun is a medium-sized star; its radius is about 700,000 km.',
      n:'Diameter about <b>1.4 million km</b>: roughly <b>110 Earths</b> across (1,400,000 &divide; 12,756). Earth is the dot beside it.',c:L(NS,'NASA Science, Sun Facts')+' · '+L(JP,'NASA JPL')}];
   var N=ST.length;
@@ -83,7 +83,7 @@
     else if(want<6*AU){var a=nice(want/AU);km=a*AU;lab=(a<1?a.toFixed(1):fmt(a))+' AU';sub='= '+fmt(km/LMIN,1)+' light-minutes';}
     else{var lm=nice(want/LMIN);km=lm*LMIN;lab=fmt(lm)+' light-minutes';sub='= '+fmt(km/AU,1)+' AU';}
     return {px:km/kpp,lab:lab,sub:sub};}
-  function txt(t,x,y,col,sz,al){ctx.font='600 '+(sz||15)+'px "IBM Plex Sans","Segoe UI",sans-serif';ctx.textAlign=al||'left';ctx.lineWidth=4;ctx.strokeStyle='rgba(3,5,13,.85)';ctx.strokeText(t,x,y);ctx.fillStyle=col||'#fff';ctx.fillText(t,x,y);}
+  function txt(t,x,y,col,sz,al){ctx.font='600 '+(sz||15)+'px "IBM Plex Sans","Segoe UI",sans-serif';ctx.textAlign=al||'left';var tw=ctx.measureText(t).width,l=al==='center'?x-tw/2:al==='right'?x-tw:x;if(l<10)x+=10-l;if(l+tw>w-10)x-=l+tw-(w-10);y=Math.max(20,Math.min(h-66,y));ctx.lineWidth=4;ctx.strokeStyle='rgba(3,5,13,.85)';ctx.strokeText(t,x,y);ctx.fillStyle=col||'#fff';ctx.fillText(t,x,y);}
   function glow(x,y,r,col,a){var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col);g.addColorStop(1,'rgba(0,0,0,0)');ctx.globalAlpha=a;ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.globalAlpha=1;}
   function dim(x1,y1,x2,y2,label,col,off){ctx.save();ctx.strokeStyle=col;ctx.fillStyle=col;ctx.lineWidth=1.5;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.setLineDash([]);
     [[x1,y1],[x2,y2]].forEach(function(p){ctx.beginPath();ctx.arc(p[0],p[1],3,0,7);ctx.fill();});ctx.restore();txt(label,(x1+x2)/2,(y1+y2)/2+(off||-10),col,15,'center');}
@@ -93,7 +93,7 @@
     if(tDur>0){tA+=dt;var x=Math.min(1,tA/tDur);s=from+(target-from)*ease(x);if(x>=1){tDur=0;s=target;dwell=0;}}
     else if(playing){dwell+=dt;if(dwell>4.5){if(s<N-1-1e-6)goTo(Math.floor(s+1e-6)+1,3.6);else{playing=false;setPlay();}}}
     var c0=cam(s,tSim);tSim+=c0.rate*dt;var c=cam(s,tSim),kpp=c.W/w;
-    function X(km){return w/2+(km-c.cx)/kpp;}function Y(km){return h/2-(km-c.cy)/kpp;}
+    var H0=(h-60)/2+8;function X(km){return w/2+(km-c.cx)/kpp;}function Y(km){return H0-(km-c.cy)/kpp;}
     ctx.setTransform(dpr,0,0,dpr,0,0);
     var bg=ctx.createRadialGradient(w*.5,h*.45,10,w*.5,h*.5,w*.75);bg.addColorStop(0,'#101a46');bg.addColorStop(.55,'#070b1e');bg.addColorStop(1,'#020309');ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
     // nebula wash, drifts with zoom
@@ -113,9 +113,10 @@
     // Sun
     var sr=Math.max(rSun,2.2);glow(sx0,sy0,Math.max(sr*2.6,26),'rgba(255,190,90,.9)',Math.min(1,0.5+rSun/200));
     if(rSun>6){var g=ctx.createRadialGradient(sx0-rSun*.15,sy0-rSun*.15,rSun*.05,sx0,sy0,rSun);g.addColorStop(0,'#fffbe6');g.addColorStop(.55,'#ffd36b');g.addColorStop(.88,'#ff9a2e');g.addColorStop(1,'#e2581a');ctx.fillStyle=g;ctx.beginPath();ctx.arc(sx0,sy0,rSun,0,7);ctx.fill();
-      ctx.save();ctx.beginPath();ctx.arc(sx0,sy0,rSun,0,7);ctx.clip();ctx.globalAlpha=0.16;for(var gq=0;gq<60;gq++){var an=gq*2.4+now*0.00005*(gq%3+1),rd=rSun*Math.sqrt((gq*0.618)%1);ctx.fillStyle=gq%2?'#fff3c0':'#c8501a';ctx.beginPath();ctx.arc(sx0+Math.cos(an)*rd,sy0+Math.sin(an)*rd,rSun*0.09,0,7);ctx.fill();}ctx.restore();}
+      ctx.save();ctx.beginPath();ctx.arc(sx0,sy0,rSun,0,7);ctx.clip();for(var gq=0;gq<140;gq++){var an=gq*2.39996+now*0.00004*(gq%3+1),rd=rSun*Math.sqrt((gq*0.618034)%1),bx2=sx0+Math.cos(an)*rd,by2=sy0+Math.sin(an)*rd,br2=rSun*(0.05+0.04*((gq*0.37)%1));var gg=ctx.createRadialGradient(bx2,by2,0,bx2,by2,br2);gg.addColorStop(0,gq%2?'rgba(255,248,210,.10)':'rgba(190,70,20,.08)');gg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gg;ctx.fillRect(bx2-br2,by2-br2,2*br2,2*br2);}
+      var lim=ctx.createRadialGradient(sx0,sy0,rSun*.7,sx0,sy0,rSun);lim.addColorStop(0,'rgba(120,30,0,0)');lim.addColorStop(1,'rgba(120,30,0,.35)');ctx.fillStyle=lim;ctx.fillRect(sx0-rSun,sy0-rSun,2*rSun,2*rSun);ctx.restore();}
     else{ctx.fillStyle='#fff3c4';ctx.beginPath();ctx.arc(sx0,sy0,sr,0,7);ctx.fill();}
-    if(rSun<60&&sx0>-50&&sx0<w+50&&sy0>-50&&sy0<h+50)txt('Sun',sx0+10,sy0-12,'#ffd27a',15);
+    if(rSun<60&&c.W<20*AU&&weight(3)<0.3&&sx0>-50&&sx0<w+50&&sy0>-50&&sy0<h+50)txt('Sun',sx0+10,sy0-12,'#ffd27a',15);
     // planets
     var ps=P.map(function(p){return pos(p,tSim);});
     P.forEach(function(p,i){var q=ps[i],px=X(q[0]),py=Y(q[1]),rp=p.r/kpp;if(px<-200||px>w+200||py<-200||py>h+200)return;
@@ -123,7 +124,7 @@
         var sh=ctx.createLinearGradient(px-rp,py,px+rp,py);sh.addColorStop(0,'rgba(0,0,0,0)');sh.addColorStop(.75,'rgba(0,0,0,0)');sh.addColorStop(1,'rgba(0,0,10,.35)');ctx.fillStyle=sh;ctx.fillRect(px-rp,py-rp,2*rp,2*rp);ctx.restore();}
       else if(rp>=3){var gp=ctx.createRadialGradient(px-rp*.3,py-rp*.3,rp*.1,px,py,rp);gp.addColorStop(0,'#fff');gp.addColorStop(.25,p.c);gp.addColorStop(1,'#111');ctx.fillStyle=gp;ctx.beginPath();ctx.arc(px,py,rp,0,7);ctx.fill();}
       else{glow(px,py,9,p.c,0.7);ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(px,py,2.6,0,7);ctx.fill();}
-      var big=c.W>2.2*AU||i>3;if((c.W>0.6*AU)&&(i<4||c.W>8*AU))txt(p.n,px+(rp>3?rp+6:8),py-8,p.c,14);});
+      if(px>0&&px<w&&py>0&&py<h-60&&(c.W>0.6*AU)&&p.a/kpp>28&&(i<4||c.W>8*AU))txt(p.n,px+(rp>3?rp+6:8),py-8,p.c,14);});
     // Moon
     var mq=moonPos(tSim),mx=X(mq[0]),my=Y(mq[1]),rm=R_MOON/kpp,eq=ps[2],ex=X(eq[0]),ey=Y(eq[1]),re=EARTH.r/kpp;
     if(c.W<2.5e7&&mx>-100&&mx<w+100){ctx.strokeStyle='rgba(200,210,255,.22)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(ex,ey,D_MOON/kpp,0,7);ctx.stroke();
@@ -137,22 +138,22 @@
     if((a=weight(2))>0){ctx.globalAlpha=a;dim(sx0,sy0,ex,ey,'1 AU','#F2A93B');ctx.globalAlpha=1;}
     if((a=weight(3))>0){var M0=P[0],qd=M0.a*(1-M0.e),Qd=M0.a*(1+M0.e),cw=Math.cos(M0.w),sw=Math.sin(M0.w);
       var pX=X(qd*cw),pY=Y(qd*sw),aX=X(-Qd*cw),aY=Y(-Qd*sw),cX=X(-M0.a*M0.e*cw),cY=Y(-M0.a*M0.e*sw),f2X=X(-2*M0.a*M0.e*cw),f2Y=Y(-2*M0.a*M0.e*sw);
-      ctx.globalAlpha=a;dim(cX,cY,aX,aY,'a = 0.387 AU','#F2A93B',-12);ctx.strokeStyle='rgba(255,255,255,.5)';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(pX,pY);ctx.lineTo(cX,cY);ctx.stroke();ctx.setLineDash([]);
-      ctx.fillStyle='#7FDBD0';ctx.beginPath();ctx.arc(f2X,f2Y,4,0,7);ctx.fill();txt('empty focus',f2X,f2Y+22,'#7FDBD0',14,'center');txt('Sun = focus',sx0,sy0+24,'#ffd27a',14,'center');txt('e = 0.206',cX,cY+40,'#fff',16,'center');ctx.globalAlpha=1;}
+      ctx.globalAlpha=a;dim(cX,cY,aX,aY,'','#F2A93B');txt('a = 0.387 AU',(cX+aX)/2+12,(cY+aY)/2+5,'#F2A93B',15);ctx.strokeStyle='rgba(255,255,255,.5)';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(pX,pY);ctx.lineTo(cX,cY);ctx.stroke();ctx.setLineDash([]);
+      ctx.fillStyle='#7FDBD0';ctx.beginPath();ctx.arc(f2X,f2Y,4,0,7);ctx.fill();txt('empty focus',f2X-12,f2Y+5,'#7FDBD0',14,'right');txt('Sun = focus',sx0+14,sy0+5,'#ffd27a',14);txt('e = 0.206',X(M0.a*0.8),Y(M0.a*0.8),'#fff',16);ctx.globalAlpha=1;}
     if((a=weight(4))>0){var M3=P[3],q3=M3.a*(1-M3.e),Q3=M3.a*(1+M3.e),c3=Math.cos(M3.w),s3=Math.sin(M3.w);ctx.globalAlpha=a;
       var p3x=X(q3*c3),p3y=Y(q3*s3),a3x=X(-Q3*c3),a3y=Y(-Q3*s3);dim(sx0,sy0,p3x,p3y,'','#7FDBD0');dim(sx0,sy0,a3x,a3y,'','#F2A93B');
       ctx.fillStyle='#7FDBD0';ctx.beginPath();ctx.arc(p3x,p3y,5,0,7);ctx.fill();ctx.fillStyle='#F2A93B';ctx.beginPath();ctx.arc(a3x,a3y,5,0,7);ctx.fill();
       txt('perihelion 1.38 AU',p3x+(p3x>sx0?10:-10),p3y+24,'#7FDBD0',15,p3x>sx0?'left':'right');txt('aphelion 1.67 AU',a3x+(a3x>sx0?10:-10),a3y-14,'#F2A93B',15,a3x>sx0?'left':'right');ctx.globalAlpha=1;}
     if((a=weight(5))>0){ctx.globalAlpha=a;txt('8.3 light-minutes',ex,ey+26,'#ffe9a8',15,'center');ctx.globalAlpha=1;}
     if((a=weight(6))>0){var jq=ps[4];ctx.globalAlpha=a;txt('P = 11.86 years',X(jq[0]),Y(jq[1])+24,'#F2A93B',16,'center');ctx.globalAlpha=1;}
-    if((a=weight(7))>0){var nq=ps[7];ctx.globalAlpha=a;txt('P\u00b2 = a\u00b3:  30.07 AU \u2192 164.9 yr',X(nq[0]),Y(nq[1])+24,'#F2A93B',16,'center');ctx.globalAlpha=1;}
+    if((a=weight(7))>0){var nq=ps[7];ctx.globalAlpha=a;txt('P\u00b2 = a\u00b3:  30.07 AU \u2192 164.9 yr',X(nq[0]),Y(nq[1])+30,'#F2A93B',16,'center');ctx.globalAlpha=1;}
     if((a=weight(8))>0){ctx.globalAlpha=a;var bx=sx0+rSun*1.22,by=sy0,br=EARTH.r/kpp;ctx.fillStyle='#5aa0ff';ctx.beginPath();ctx.arc(bx,by,Math.max(br,1.6),0,7);ctx.fill();
       ctx.strokeStyle='rgba(127,219,208,.9)';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(bx,by,9+3*Math.sin(now*0.004),0,7);ctx.stroke();txt('Earth, same scale',bx+16,by+5,'#9cd0ff',15);
-      dim(sx0-rSun,sy0+rSun+22,sx0+rSun,sy0+rSun+22,'1.4 million km','#F2A93B',-10);ctx.globalAlpha=1;}
+      dim(sx0-rSun,sy0-rSun-16,sx0+rSun,sy0-rSun-16,'1.4 million km','#F2A93B',-10);ctx.globalAlpha=1;}
     // scale bar (top right)
-    var sb=scaleBar(kpp),x1=w-18,x0=x1-sb.px,yb=30;ctx.fillStyle='rgba(3,5,13,.55)';ctx.fillRect(x0-12,yb-22,sb.px+24,sb.sub?58:42);
+    var sb=scaleBar(kpp),x1=w-22,x0=x1-sb.px,yb=30;ctx.font='600 15px "IBM Plex Sans",sans-serif';var tw=Math.max(sb.px,ctx.measureText(sb.lab).width,sb.sub?ctx.measureText(sb.sub).width:0),tc=x1-tw/2;ctx.fillStyle='rgba(3,5,13,.55)';ctx.fillRect(x1-tw-12,yb-16,tw+24,sb.sub?62:44);
     ctx.strokeStyle='#fff';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(x0,yb-6);ctx.lineTo(x0,yb+6);ctx.moveTo(x0,yb);ctx.lineTo(x1,yb);ctx.moveTo(x1,yb-6);ctx.lineTo(x1,yb+6);ctx.stroke();
-    txt(sb.lab,(x0+x1)/2,yb+22,'#fff',15,'center');if(sb.sub)txt(sb.sub,(x0+x1)/2,yb+40,'#B8C3EE',14,'center');
+    txt(sb.lab,tc,yb+22,'#fff',15,'center');if(sb.sub)txt(sb.sub,tc,yb+40,'#B8C3EE',14,'center');
     // readout + side panel
     var Wtxt=c.W<1e6?fmt(c.W/1e3)+' thousand km':c.W<0.3*AU?fmt(c.W/1e6,1)+' million km':fmt(c.W/AU,1)+' AU';
     var ry=(tSim-t0)/365.25;$('spzRead').innerHTML='view width <b>'+Wtxt+'</b><br>1 s = <b>'+(c.rate<1?fmt(c.rate*24,0)+' hours':c.rate<730?fmt(c.rate,0)+' days':fmt(c.rate/365.25,0)+' years')+'</b> · elapsed '+(ry<1?fmt(ry*365.25,0)+' days':fmt(ry,1)+' yr');

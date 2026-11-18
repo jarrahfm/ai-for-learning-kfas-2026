@@ -91,10 +91,10 @@
     var a=S(x-0.2,1.45),b=S(x+0.2,0.85);rr(a[0],a[1],b[0]-a[0],b[1]-a[1],0.08*k);cx.fill();cx.stroke();
     var l1=S(x-0.17,0.88),l2=S(x+0.17,0);rr(l1[0],l1[1],(l2[0]-l1[0])*.44,l2[1]-l1[1],0.04*k);cx.fill();cx.stroke();rr(l1[0]+(l2[0]-l1[0])*.56,l1[1],(l2[0]-l1[0])*.44,l2[1]-l1[1],0.04*k);cx.fill();cx.stroke();cx.restore();}
   function drawClock(){var k=cam.k;if(k<6)return;
-    var wood=lin(4.7,0,5.3,0,'#3B1D12','#7A3F22');
-    rect(4.72,0,5.28,0.55,wood);rect(4.78,0.55,5.22,1.95,wood);rect(4.70,1.95,5.30,2.42,wood);rect(4.66,2.42,5.34,2.48,'#8A4A28');
-    rect(4.84,0.66,5.16,1.90,'rgba(10,14,30,.92)');
-    var g1=S(4.84,1.90),g2=S(5.16,0.66);cx.save();cx.strokeStyle='rgba(255,226,160,.55)';cx.lineWidth=Math.max(1,0.006*k);cx.strokeRect(g1[0],g1[1],g2[0]-g1[0],g2[1]-g1[1]);cx.restore();
+    var wood=lin(4.6,0,5.4,0,'#3B1D12','#7A3F22');
+    rect(4.62,0,5.38,0.55,wood);rect(4.66,0.55,5.34,1.95,wood);rect(4.60,1.95,5.40,2.42,wood);rect(4.56,2.42,5.44,2.48,'#8A4A28');
+    rect(4.70,0.66,5.30,1.90,lin(4.7,0,5.3,0,'#0B1026','#141B3C'));
+    var g1=S(4.70,1.90),g2=S(5.30,0.66);cx.save();cx.strokeStyle='rgba(255,226,160,.55)';cx.lineWidth=Math.max(1,0.006*k);cx.strokeRect(g1[0],g1[1],g2[0]-g1[0],g2[1]-g1[1]);cx.restore();
     var d=S(5,2.19),R=0.15*k;cx.save();var dg=cx.createRadialGradient(d[0]-R*.3,d[1]-R*.3,R*.1,d[0],d[1],R);dg.addColorStop(0,'#FFFDF4');dg.addColorStop(1,'#D9CFB4');cx.fillStyle=dg;cx.beginPath();cx.arc(d[0],d[1],R,0,7);cx.fill();
     cx.strokeStyle='#1B1F3B';cx.lineWidth=Math.max(1,R*.03);for(var i=0;i<60;i++){var an=i/60*2*Math.PI,r0=i%5?R*.9:R*.8;cx.beginPath();cx.moveTo(d[0]+Math.sin(an)*r0,d[1]-Math.cos(an)*r0);cx.lineTo(d[0]+Math.sin(an)*R*.96,d[1]-Math.cos(an)*R*.96);cx.stroke();}
     var sec=Math.floor(t)%60,an2=sec/60*2*Math.PI;cx.strokeStyle='#C0392B';cx.lineWidth=Math.max(1,R*.025);cx.beginPath();cx.moveTo(d[0],d[1]);cx.lineTo(d[0]+Math.sin(an2)*R*.85,d[1]-Math.cos(an2)*R*.85);cx.stroke();
@@ -127,7 +127,7 @@
       cx.beginPath();cx.moveTo(e[0],e[1]-60);cx.lineTo(e[0],e[1]+30);cx.moveTo(r[0],r[1]-60);cx.lineTo(r[0],r[1]+30);cx.stroke();cx.setLineDash([]);cx.restore();
       cx.save();cx.globalAlpha=a2;arrow(0,0.3,ax,0.3,'#7FDBD0',3);tag('amplitude A',(e[0]+r[0])/2-50,e[1]-74,'#7FDBD0',17);tag('equilibrium',e[0]-48,e[1]+48,'#fff',15);tag('visitor, for scale',S(3.3,1.9)[0]-60,S(3.3,1.9)[1]-8,'#C9D3FF',14);cx.restore();}
     // seconds pendulum length bracket
-    var a3=near(2);if(a3>0){cx.save();cx.globalAlpha=a3;var p0=S(5.42,CP.y),p1=S(5.42,Y0);cx.strokeStyle='#F2A93B';cx.lineWidth=2.5;cx.beginPath();cx.moveTo(p0[0]-6,p0[1]);cx.lineTo(p0[0]+6,p0[1]);cx.moveTo(p0[0],p0[1]);cx.lineTo(p1[0],p1[1]);cx.moveTo(p1[0]-6,p1[1]);cx.lineTo(p1[0]+6,p1[1]);cx.stroke();
+    var a3=near(2);if(a3>0){cx.save();cx.globalAlpha=a3;var p0=S(5.52,CP.y),p1=S(5.52,Y0);cx.strokeStyle='#F2A93B';cx.lineWidth=2.5;cx.beginPath();cx.moveTo(p0[0]-6,p0[1]);cx.lineTo(p0[0]+6,p0[1]);cx.moveTo(p0[0],p0[1]);cx.lineTo(p1[0],p1[1]);cx.moveTo(p1[0]-6,p1[1]);cx.lineTo(p1[0]+6,p1[1]);cx.stroke();
       tag('L \u2248 0.994 m',p0[0]+12,(p0[1]+p1[1])/2,'#F2A93B',17);tag('T = 2 s  \u00b7  f = 0.5 Hz',p0[0]+12,(p0[1]+p1[1])/2+30,'#fff',16);cx.restore();}
     // forces on the clock bob
     var a4=Math.max(near(3),u<su(3)?Math.max(0,1-fade*1.4):0);if(a4>0&&cam.k>300){cx.save();cx.globalAlpha=a4;var F=0.16,s=Math.sin(cth),co=Math.cos(cth);
@@ -147,7 +147,7 @@
       var gap=gapOf(phiD),deg=Math.round(phiD/D2R);
       tag('arc  L\u03b8 = '+(CL*phiD*100).toFixed(2)+' cm',Math.min(e1[0]+10,W-230),e1[1]-46,'#7FDBD0',17);
       tag('L\u00b7sin\u03b8 = '+(CL*Math.sin(phiD)*100).toFixed(2)+' cm',Math.max(12,e2[0]-230),e2[1]+52,'#F2A93B',17);
-      tag('gap at '+deg+'\u00b0 = '+(gap*1000).toFixed(gap<0.001?2:1)+' mm',Math.max(270,(e1[0]+e2[0])/2-90),e1[1]-92,'#fff',19);cx.restore();}
+      tag('gap at '+deg+'\u00b0 = '+(gap*1000).toFixed(gap<0.001?2:1)+' mm',Math.max(12,Math.min(W-260,(e1[0]+e2[0])/2-100)),e2[1]+96,'#fff',19);cx.restore();}
     // readout
     $('pdzRead').innerHTML='Foucault: L = 67 m, T = <b>'+FT.toFixed(1)+' s</b><br>clock: L = 0.994 m, T = <b>'+CT.toFixed(2)+' s</b><br>view width: <b>'+fmt(w)+'</b>';
     scale();
@@ -164,7 +164,7 @@
     $('pdzAng').classList.toggle('on',i===N-1);
     [].forEach.call($('pdzDots').children,function(b,j){b.classList.toggle('on',j===i)});}
   var dots=$('pdzDots');STOPS.forEach(function(s,i){var b=document.createElement('button');b.textContent=(i+1)+' '+s.term.split(' ')[0];b.title=s.term;b.onclick=function(){setPlay(false);go(i)};dots.appendChild(b);});
-  [5,15,30].forEach(function(d){var b=document.createElement('button');b.innerHTML=d+'\u00b0<small>error '+err(d).toFixed(2)+'%</small>';b.dataset.d=d;if(d===15)b.className='on';
+  [5,15,30].forEach(function(d){var b=document.createElement('button');b.innerHTML=d+'\u00b0<small>'+err(d).toFixed(2)+'%</small>';b.dataset.d=d;if(d===15)b.className='on';
     b.onclick=function(){phi=d*D2R;[].forEach.call($('pdzAng').children,function(x){x.classList.toggle('on',x===b)});setPlay(false);if(cur!==N-1||anim)go(N-1);};$('pdzAng').appendChild(b);});
   function setPlay(p){playing=p;var b=$('pdzPlay');b.classList.toggle('on',p);b.innerHTML=p?'&#10073;&#10073; Pause':'&#9654; Play';hold=0;}
   $('pdzPlay').onclick=function(){setPlay(!playing);if(playing&&!anim)hold=4;};

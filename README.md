@@ -8,6 +8,11 @@ KFAS Science Month 2026 workshop deck (facilitator Mariam Madouh, supervisor Jar
 - **Hide slides before presenting:** press `O`, then click "Showing: click to hide" under any slide. Arrow keys skip hidden slides; the choice is remembered in that browser. Click again to bring a slide back.
 - Hosted copy (for the "Scan for the slides" QR): https://jarrahfm.github.io/ai-for-learning-kfas-2026/
 
+## What's inside
+- Each of the four simulation dives (pendulum, take-off, bacteria, planets) has an **Advanced: zoom** tab: one continuous zoom through real scales with a live scale bar, exact terms and definitions with citations (OpenStax, NASA, JPL, Airbus, BioNumbers), clickable sources, and the copy-able prompt that builds it.
+- Official KFAS and KFAS 50 Years logos (from kfas.org.kw) on every slide; each section has its own colour theme.
+- Every QR code is also clickable and opens its link; buttons glow and lift on hover so they read as clickable.
+
 ## Kahoot
 - Live quiz, 10 questions: https://create.kahoot.it/details/3b4a04f5-2577-4f83-8b95-5a3df30dc176 (owner: jarrahfm@gmail.com).
 - Free account = **Team mode** (up to 5 teams, one phone per team); Classic mode is capped at 10 players.

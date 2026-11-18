@@ -3,6 +3,7 @@
 #dive-bacteria .tabs button.bz-tab::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);animation:bzShim 2.8s ease-in-out infinite}
 #dive-bacteria .tabs button.bz-tab:hover{transform:translateY(-2px);box-shadow:0 10px 24px -6px rgba(43,179,163,.9)}
 #dive-bacteria .tabs button.bz-tab.sel{background:linear-gradient(110deg,#1B1F3B,#2E3A8C 55%,#2BB3A3);box-shadow:0 0 0 2px #F2A93B inset}
+#dive-bacteria .tabs{gap:5px}#dive-bacteria .tabs button{padding:8px 10px;letter-spacing:.02em;font-size:12px}#dive-bacteria .head h2 .lt{font-size:22px}
 @keyframes bzShim{0%{left:-60%}55%,100%{left:130%}}
 
 #bz .dive{grid-template-columns:1fr 340px}
@@ -23,7 +24,7 @@
 #bz .bz-zl{flex:1;display:flex;align-items:center;gap:8px;color:#C9F2EC;font:600 14px var(--mono);text-transform:uppercase;letter-spacing:.08em}
 #bz .bz-zl input{flex:1;accent-color:var(--teal);cursor:pointer}
 
-#bz .bz-side{gap:8px;min-height:440px;max-height:440px;overflow:hidden;padding:16px 18px}
+#bz .bz-side{position:relative;gap:8px;min-height:440px;max-height:440px;overflow:hidden;padding:16px 18px}
 #bz .bz-eb{font:600 14px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#177a6e}
 #bz .bz-term{font:700 24px/1.15 var(--disp);color:var(--navy);margin:0}
 #bz .bz-def{font-size:17px;line-height:1.42;color:#141A33;margin:0}
@@ -45,3 +46,8 @@
 #bz .bz-src a{color:var(--royal);font-weight:600}
 #bz .bz-src a:hover{color:var(--electric)}
 #bz .bz-src .bz-nb{list-style:none;margin-left:-16px;color:#141A33;font-style:italic}
+#bz .bz-d[open]{position:absolute;inset:10px;z-index:4;background:#fff;box-shadow:0 18px 40px -12px rgba(20,26,51,.45);display:flex;flex-direction:column}
+#bz .bz-d[open] .bz-pbox pre{max-height:350px}
+#bz .bz-d[open] .bz-src{max-height:350px}
+#bz .bz-d[open] summary::after{content:"close";float:right;font:600 14px var(--ui);color:#177a6e;margin-right:64px}
+#bz #bzSd[open] summary::after{margin-right:0}
