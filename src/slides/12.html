@@ -1,9 +1,9 @@
 <!-- 11 DIVE 3 BIOLOGY BACTERIA -->
-<section class="slide" id="dive-bacteria" data-notes="&lt;b&gt;Dive 3, 4:54 to 4:57.&lt;/b&gt; Guess first: one bacterium, dividing every 20 minutes, how many after 6 hours? Press Grow. Exponential until nutrients run out, then the curve flattens: logistic growth. Add antibiotic. 3D tab shows the colony on the dish. Verify: OpenStax Microbiology 9.1 and Biology 45.3.">
+<section class="slide" id="dive-bacteria" data-notes="&lt;b&gt;Dive 3, 4:54 to 4:57.&lt;/b&gt; Guess first: one bacterium, dividing every 20 minutes, how many after 6 hours? Press Grow. Exponential until nutrients run out, then the curve flattens: logistic growth. Add antibiotic. 3D tab shows the colony on the dish. Verify: OpenStax Microbiology 9.1 and Biology 45.3. &lt;b&gt;Advanced: zoom tab&lt;/b&gt; (last tab): press Play, or use Prev / Next and the zoom slider. One camera flies from the agar plate into a colony, its edge, one E. coli cell (about 2 µm by 1 µm, BioNumbers), flagellum, fimbriae and pili, nucleoid and plasmids, 70S ribosomes, then the Gram-negative envelope (peptidoglycan no more than about 4 nm). Stop 4 shows binary fission. The side panel gives each exact term, an OpenStax definition and the link; the prompt and sources are in the two drop-downs.">
 <div class="mark"><b>Dive 3 · Biology</b><i></i><span>Bacteria in a dish</span></div>
 <div class="pad" style="padding-top:78px">
   <div class="head"><div><h2 style="font-size:32px">Bacteria in a dish <span class="lt">exponential, then logistic</span></h2></div>
-    <div class="tabs" data-dive="bi"><button class="sel" data-p="2d">2D dish</button><button data-p="3d">3D colony</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+    <div class="tabs" data-dive="bi"><button class="sel" data-p="2d">2D dish</button><button data-p="3d">3D colony</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button><button data-p="adv" class="bz-tab">Advanced: zoom</button></div></div>
   <div class="pane on" data-p="2d"><div class="dive">
     <div class="view"><canvas id="biC" width="860" height="440"></canvas><div class="readout" id="biRead">t = <b>0.0 h</b> &nbsp; N = <b>1</b> cells<br>doubling 20 min → r = 2.08 /h<br>exponential alone would give 1</div><div class="sim-note">N(t) = K / (1 + ((K − N₀)/N₀) e<sup>−rt</sup>)</div></div>
     <div class="g side">
@@ -37,6 +37,33 @@
       <tr><td>Growth is exponential, then levels off at a carrying capacity</td><td>OpenStax Biology 2e, §45.3</td><td><span class="lab v">VERIFIED</span></td></tr>
       <tr><td>2<sup>18</sup> = 262,144 cells after 6 hours from one cell</td><td>Recomputed by hand</td><td><span class="lab v">VERIFIED</span></td></tr>
       <tr><td>Real cultures follow this curve exactly</td><td>No: real growth has a lag phase first and a death phase later</td><td><span class="lab x">UNSUPPORTED</span></td></tr></tbody></table></div>
+  </div></div>
+  <div class="pane" data-p="adv" id="bz"><div class="dive">
+    <div class="view bz-view"><canvas id="bzC"></canvas>
+      <div class="bz-stop" id="bzStop">1 / 10 · Petri dish</div>
+      <div class="bz-scale"><span id="bzScaleT">1 cm</span><i id="bzScaleB"></i><em id="bzFov">field of view 20 cm</em></div>
+      <div class="bz-ctl"><button class="bz-b" id="bzPrev" title="Previous stop">&#9664; Prev</button><button class="bz-b bz-main" id="bzPlay">&#9654; Play</button><button class="bz-b" id="bzNext" title="Next stop">Next &#9654;</button>
+        <label class="bz-zl">zoom<input type="range" id="bzZ" min="0" max="9" step="0.001" value="0" aria-label="Zoom along the path, log scale"></label></div>
+    </div>
+    <div class="g side bz-side">
+      <div class="bz-eb" id="bzEb">Stop 1 of 10</div>
+      <h3 class="bz-term" id="bzTerm">Petri dish</h3>
+      <p class="bz-def" id="bzDef"></p>
+      <div class="bz-num" id="bzNum"></div>
+      <a class="bz-cite" id="bzCite" href="#" target="_blank" rel="noopener"></a>
+      <details class="bz-d" id="bzPd"><summary>The prompt for this advanced view</summary><div class="bz-pbox"><button class="bz-copy" id="bzCopy">Copy</button><pre id="bzPrompt">ROLE: You are a microbiology teacher and a careful front-end developer.
+TASK: Build ONE self-contained HTML file (canvas, no libraries) that zooms continuously, with one smooth camera, from a whole agar plate (Petri dish) into one colony, the colony edge, one Escherichia coli cell, its flagellum, fimbriae and pili, its nucleoid, plasmids and 70S ribosomes, and finally its Gram-negative cell envelope. Add one stop where a cell divides by binary fission.
+CONTEXT: For first-year students in a 3-minute demo. The zoom must feel like flying in, not a slideshow: interpolate the camera in log scale.
+CONSTRAINTS: Use only sizes and definitions you can cite from OpenStax Microbiology 3.3 and 9.1, OpenStax Biology 2e 4.2 and BioNumbers ("How big is an E. coli cell"). Quote definitions word for word. If no source gives a number, show no number. Text at least 16 px.
+FORMAT: A live scale bar whose unit changes (cm, mm, um, nm); 10 zoom stops, each with a label on the drawing plus a side panel: exact term, one-line definition, citation link. Controls: Play/Pause, Previous/Next stop, a log-scale zoom slider.
+CHECK: Finish with a table of every number and term shown, with its source and section, and mark anything you could not source so I can verify it myself.</pre></div></details>
+      <details class="bz-d" id="bzSd"><summary>Sources (checked 18 Nov 2026)</summary><ul class="bz-src">
+        <li><a href="https://openstax.org/books/microbiology/pages/3-3-unique-characteristics-of-prokaryotic-cells" target="_blank" rel="noopener">OpenStax Microbiology, 3.3 Unique Characteristics of Prokaryotic Cells</a></li>
+        <li><a href="https://openstax.org/books/microbiology/pages/9-1-how-microbes-grow" target="_blank" rel="noopener">OpenStax Microbiology, 9.1 How Microbes Grow</a></li>
+        <li><a href="https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells" target="_blank" rel="noopener">OpenStax Biology 2e, 4.2 Prokaryotic Cells</a></li>
+        <li><a href="https://book.bionumbers.org/how-big-is-an-e-coli-cell-and-what-is-its-mass/" target="_blank" rel="noopener">Milo &amp; Phillips, Cell Biology by the Numbers: How big is an E. coli cell?</a></li>
+        <li class="bz-nb">Plate and colony sizes are drawn at typical lab size, not sourced numbers. Inside the cell, parts are placed for clarity.</li></ul></details>
+    </div>
   </div></div>
 </div>
 <div class="foot"><span>Dive 3</span><span>openstax.org/books/microbiology · biology-2e</span><span></span></div><div class="rulebar"></div>

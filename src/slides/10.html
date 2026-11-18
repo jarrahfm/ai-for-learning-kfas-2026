@@ -1,9 +1,9 @@
 <!-- 9 DIVE 1 PHYSICS PENDULUM -->
-<section class="slide" id="dive-pendulum" data-notes="&lt;b&gt;Dive 1, 4:46 to 4:50.&lt;/b&gt; Guess first: if I double the length, does the period double? Run it. Change the mass: nothing. Moon: slow motion. 3D tab: same equation, seen in space. Verify tab: the prompts that built this, and the labelled claims. Compare with PhET.">
+<section class="slide" id="dive-pendulum" data-notes="&lt;b&gt;Dive 1, 4:46 to 4:50.&lt;/b&gt; Guess first: if I double the length, does the period double? Run it. Change the mass: nothing. Moon: slow motion. 3D tab: same equation, seen in space. Verify tab: the prompts that built this, and the labelled claims. Compare with PhET. &lt;br&gt;&lt;b&gt;Advanced: zoom tab.&lt;/b&gt; Click the glowing tab, then Play (auto tour) or Next stop. One camera zooms from Foucault&amp;#39;s 67 m pendulum in the Panth&amp;eacute;on (16.4 s per swing) to a 1 m seconds pendulum clock (2 s), into its bob (weight, tension, restoring force mg&amp;middot;sin&amp;theta;), down to millimetres where sin&amp;theta; and &amp;theta; part ways. At the last stop press 5&amp;deg;, 15&amp;deg;, 30&amp;deg;: the gap grows from 0.1 mm to 2 cm. The slider is a log zoom. The prompt that builds it is in the side panel, with a Copy button.">
 <div class="mark"><b>Dive 1 · Physics</b><i></i><span>The pendulum</span></div>
 <div class="pad" style="padding-top:78px">
   <div class="head"><div><h2 style="font-size:32px">The pendulum <span class="lt">T = 2π√(L/g)</span></h2></div>
-    <div class="tabs" data-dive="pd"><button class="sel" data-p="2d">2D lab</button><button data-p="3d">3D view</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+    <div class="tabs" data-dive="pd"><button class="sel" data-p="2d">2D lab</button><button data-p="3d">3D view</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button><button data-p="adv" class="pdz-tab">Advanced: zoom</button></div></div>
   <div class="pane on" data-p="2d"><div class="dive">
     <div class="view"><canvas id="pdC" width="860" height="440"></canvas><div class="readout" id="pdRead">T = 2π√(L/g) = <b>2.18 s</b><br>f = 0.46 Hz &nbsp; g = 25.00 m/s²<br>mass = 5.0 kg (no effect on T)</div><div class="sim-note">Built by an AI from a 6-part prompt</div></div>
     <div class="g side">
@@ -39,6 +39,31 @@
       <tr><td>Mass has no effect on T</td><td>OpenStax §15.4; HyperPhysics; PhET</td><td><span class="lab v">VERIFIED</span></td></tr>
       <tr><td>Formula is exact at any angle</td><td>Contradicted: at 90° the real period is about 18% longer</td><td><span class="lab x">UNSUPPORTED</span></td></tr>
       <tr><td>g in Kuwait is 9.79 m/s²</td><td>Plausible; needs a geodetic source</td><td><span class="lab u">UNCERTAIN</span></td></tr></tbody></table></div>
+  </div></div>
+  <div class="pane" data-p="adv"><div class="dive" id="pdz">
+    <div class="view pdz-view"><canvas id="pdzC"></canvas>
+      <div class="pdz-dots" id="pdzDots"></div>
+      <div class="pdz-scale"><i id="pdzBar"></i><span id="pdzBarL">10 m</span></div>
+      <div class="pdz-read" id="pdzRead"></div>
+      <div class="pdz-ctl"><button class="pdz-b" id="pdzPrev" aria-label="Previous stop">&#9664; Prev</button><button class="pdz-b pdz-main" id="pdzPlay">&#9654; Play</button><button class="pdz-b" id="pdzNext" aria-label="Next stop">Next &#9654;</button>
+        <label class="pdz-zl">zoom<input type="range" id="pdzZ" min="0" max="1000" step="1" value="0"></label></div>
+      <div class="pdz-prompt" id="pdzPrompt"><div class="pdz-ph"><b>The prompt for this advanced view</b><span><button class="pdz-b" id="pdzCopy">Copy</button><button class="pdz-b" id="pdzClose" aria-label="Close">&#10005;</button></span></div><pre id="pdzPText">ROLE: Act as a physics teacher and a careful front-end developer.
+TASK: Build ONE self-contained HTML file (no libraries) with a canvas that zooms smoothly, with one eased camera on a log scale, through real sizes of a pendulum: Foucault's pendulum in the Panth&eacute;on (67 m wire, 28 kg bob), down to a 1 m seconds pendulum clock, into its bob, down to millimetres.
+CONTEXT: I am a first-year student. Stops and terms: period, amplitude, seconds pendulum and frequency, restoring force (weight, tension, mg&middot;sin&theta;), small-angle approximation (sin&theta; &asymp; &theta;) and simple harmonic motion. Swing every pendulum at its real period T = 2&pi;&radic;(L/g).
+CONSTRAINTS: Draw everything to scale and keep a live scale bar whose unit changes (10 m, 1 m, 10 cm, 1 mm). Use only numbers and definitions from OpenStax University Physics Vol. 1 sections 15.1 and 15.4 and the Panth&eacute;on's official page, and cite them next to each term. Text at least 16 px. If you are not sure of a number, leave it out.
+FORMAT: Play/Pause, Previous/Next stop and a log zoom slider. At each stop, a callout with the term, a one-line definition and a short citation. At the last stop, buttons for 5&deg;, 15&deg; and 30&deg; that show the gap between the arc L&theta; and L&middot;sin&theta;.
+CHECK: Print the computed periods and the sin&theta; error at 5&deg;, 15&deg; and 30&deg;, list every number with its source, and tell me which ones I should verify myself.</pre></div>
+    </div>
+    <div class="g side pdz-side">
+      <div class="pdz-k" id="pdzK">Stop 1 of 5</div>
+      <h3 class="pdz-term" id="pdzTerm">Period</h3>
+      <p class="pdz-def" id="pdzDef"></p>
+      <div class="pdz-fact" id="pdzFact"></div>
+      <div class="pdz-ang" id="pdzAng"></div>
+      <div class="pdz-cite" id="pdzCite"></div>
+      <button class="pdz-b pdz-open" id="pdzOpen">The prompt for this advanced view &#9656;</button>
+      <div class="pdz-src"><b>Sources, checked 18 Nov 2026:</b> <a href="https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion" target="_blank" rel="noopener">OpenStax UP1 &sect;15.1</a> &middot; <a href="https://openstax.org/books/university-physics-volume-1/pages/15-4-pendulums" target="_blank" rel="noopener">&sect;15.4</a> &middot; <a href="https://www.paris-pantheon.fr/en/discover/foucault-s-pendulum" target="_blank" rel="noopener">Panth&eacute;on (CMN)</a> &middot; <a href="https://en.wikipedia.org/wiki/Seconds_pendulum" target="_blank" rel="noopener">Seconds pendulum</a></div>
+    </div>
   </div></div>
 </div>
 <div class="foot"><span>Dive 1</span><span>openstax.org · phet.colorado.edu</span><span></span></div><div class="rulebar"></div>

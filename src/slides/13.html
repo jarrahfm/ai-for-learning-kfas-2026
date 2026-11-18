@@ -1,9 +1,9 @@
 <!-- 12 DIVE 4 SPACE: PLANETS IN ORBIT  REV3SPACE -->
-<section class="slide" id="dive-orbits" data-notes="&lt;b&gt;Dive 4, 4:57 to 5:00.&lt;/b&gt; Guess first: a planet twice as far from the Sun as Earth, how long is its year? Press Play. Drag 'your planet' outward and watch its year grow: Kepler's third law, T² = a³. Make the star heavier and everything speeds up. 3D tab: the same clock, seen from space. Verify: NASA planetary fact sheet, OpenStax Astronomy. Then: ten-minute break, log in to your AI.">
+<section class="slide" id="dive-orbits" data-notes="&lt;b&gt;Dive 4, 4:57 to 5:00.&lt;/b&gt; Guess first: a planet twice as far from the Sun as Earth, how long is its year? Press Play. Drag 'your planet' outward and watch its year grow: Kepler's third law, T² = a³. Make the star heavier and everything speeds up. 3D tab: the same clock, seen from space. Verify: NASA planetary fact sheet, OpenStax Astronomy. Advanced: zoom tab: press Play (or Next) to fly one camera from Earth at true size, out past the Moon, the inner planets, the outer planets, and back to the Sun at true size; the side panel gives the exact term, definition and source at each of nine stops; drag the zoom slider to scrub; the scale bar switches km, thousand km, AU, light-minutes. 'The prompt for this advanced view' opens the copyable prompt. Then: ten-minute break, log in to your AI.">
 <div class="mark"><b>Dive 4 · Space</b><i></i><span>Planets in orbit</span></div>
 <div class="pad" style="padding-top:78px">
   <div class="head"><div><h2 style="font-size:32px">Planets in orbit <span class="lt">T² = a³ (Kepler's third law)</span></h2></div>
-    <div class="tabs" data-dive="sp"><button class="sel" data-p="2d">2D orbits</button><button data-p="3d">3D planets</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+    <div class="tabs" data-dive="sp"><button class="sel" data-p="2d">2D orbits</button><button data-p="3d">3D planets</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button><button class="spz-tab" data-p="adv">Advanced: zoom</button></div></div>
   <div class="pane on" data-p="2d"><div class="dive">
     <div class="view" style="background:radial-gradient(circle at 50% 50%,#1a2150,#070B16 70%)"><canvas id="spC" width="860" height="440"></canvas><div class="readout" id="spRead">t = <b>0.0 Earth years</b><br>your planet: a = 1.00 AU → one year = <b>1.00 Earth years</b><br>speed 29.8 km/s &nbsp; star = 1.0 Suns</div><div class="sim-note">Top view · not to scale</div></div>
     <div class="g side">
@@ -39,6 +39,37 @@
       <tr><td>Saturn's year is about 29 Earth years</td><td>NASA Planetary Fact Sheet (29.4 years)</td><td><span class="lab v">VERIFIED</span></td></tr>
       <tr><td>The orbits are perfect circles</td><td>Simplification: real orbits are ellipses (Kepler's first law)</td><td><span class="lab x">UNSUPPORTED</span></td></tr>
       <tr><td>A ninth large planet exists beyond Neptune</td><td>Proposed (Batygin &amp; Brown 2016); not yet observed</td><td><span class="lab u">UNCERTAIN</span></td></tr></tbody></table></div>
+  </div></div>
+  <div class="pane" data-p="adv"><div class="dive spz">
+    <div class="view spz-view"><canvas id="spzC"></canvas>
+      <div class="spz-chip" id="spzChip"></div>
+      <div class="spz-read" id="spzRead"></div>
+      <div class="spz-ctl"><button class="btn" id="spzPrev">&#9664; Prev</button><button class="btn a spz-go" id="spzGo">&#9654; Play</button><button class="btn" id="spzNext">Next &#9654;</button>
+        <label class="spz-zl">Zoom <small>(log)</small><input type="range" id="spzZ" min="0" max="800" step="1" value="0"></label></div>
+      <div class="spz-over" id="spzPrompt"><button class="spz-x" data-x="spzPrompt">Close &#10005;</button><div class="spz-oh">The prompt for this advanced view <button class="btn t sm" id="spzCopy">Copy prompt</button></div><pre class="spz-pre" id="spzPre">ROLE: You are an astronomy educator and a careful front-end developer.
+TASK: Build one self-contained HTML file with a canvas that zooms continuously, with one smooth eased camera, through the real scales of the Solar System: Earth at its true diameter, Earth and Moon at their real distance, the inner planets' orbits, the outer planets, then back to the Sun at true size beside Earth.
+CONTEXT: For first-year university students. Use these values and show the source on screen: planet radii (NASA JPL "Planetary Physical Parameters"), Moon 384,400 km away (NASA Moon facts), 1 AU = 149,597,870.7 km and light crosses it in 499 s (JPL "Astrodynamic Parameters"), each orbit's semimajor axis and eccentricity (JPL "Approximate Positions of the Planets"), Sun radius about 700,000 km (NASA Sun facts). Terms and definitions from OpenStax Astronomy 2e, chapter 3.
+CONSTRAINTS: Everything at true scale; if a body is smaller than 3 pixels, draw a dot and say so. Real ellipses from a and e. A scale bar that switches units: km, thousand km, AU, light-minutes. Nine zoom stops, each with one term, a one-line definition and a short citation. Play/Pause, Previous/Next stop and a log-scale zoom slider. No external libraries. Do not invent numbers.
+FORMAT: One HTML file with inline CSS and JS, commented for a beginner, then a table of every number used and its source.
+CHECK: Before answering, confirm by hand: Jupiter's sqrt(5.203^3) = 11.87 years vs the measured 11.86; 1 AU divided by the speed of light = 8.3 minutes; the Earth-Moon distance = about 30 Earth diameters. List anything you could not source.</pre></div>
+      <div class="spz-over" id="spzSrc"><button class="spz-x" data-x="spzSrc">Close &#10005;</button><div class="spz-oh">Sources (checked 18 Nov 2026)</div><ol class="spz-src">
+        <li><a href="https://openstax.org/books/astronomy-2e/pages/3-1-the-laws-of-planetary-motion" target="_blank" rel="noopener">OpenStax Astronomy 2e, &sect;3.1 The Laws of Planetary Motion</a> (ellipse, semimajor axis, eccentricity, orbital period, Kepler's third law)</li>
+        <li><a href="https://openstax.org/books/astronomy-2e/pages/3-key-terms" target="_blank" rel="noopener">OpenStax Astronomy 2e, Chapter 3 Key Terms</a> (AU, perihelion, aphelion)</li>
+        <li><a href="https://ssd.jpl.nasa.gov/planets/phys_par.html" target="_blank" rel="noopener">NASA JPL SSD, Planetary Physical Parameters</a> (equatorial radii, orbital periods)</li>
+        <li><a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html" target="_blank" rel="noopener">NASA JPL SSD, Approximate Positions of the Planets, Table 1</a> (a, e, orbit orientation, J2000)</li>
+        <li><a href="https://ssd.jpl.nasa.gov/astro_par.html" target="_blank" rel="noopener">NASA JPL SSD, Astrodynamic Parameters</a> (1 AU = 149,597,870,700 m; speed of light; au/c = 499.0 s)</li>
+        <li><a href="https://science.nasa.gov/moon/facts/" target="_blank" rel="noopener">NASA Science, Moon Facts</a> (average distance 384,400 km; radius 1,740 km)</li>
+        <li><a href="https://science.nasa.gov/sun/facts/" target="_blank" rel="noopener">NASA Science, Sun Facts</a> (radius about 700,000 km; diameter 1.4 million km)</li>
+      </ol><p class="spz-sm">Perihelion and aphelion distances are computed from JPL's a and e: a(1 &minus; e) and a(1 + e). Light-minute = speed of light &times; 60 s. The NASA Planetary Fact Sheet (nssdc.gsfc.nasa.gov) did not respond today, so JPL tables from the same agency were used.</p></div>
+    </div>
+    <div class="g side spz-side">
+      <div class="spz-k" id="spzK"></div>
+      <h3 class="spz-term" id="spzT"></h3>
+      <p class="spz-def" id="spzD"></p>
+      <p class="spz-num" id="spzN"></p>
+      <p class="spz-cite" id="spzCi"></p>
+      <div class="spz-links"><button class="spz-tog" data-o="spzPrompt">The prompt for this advanced view</button><button class="spz-tog" data-o="spzSrc">Sources (7)</button></div>
+    </div>
   </div></div>
 </div>
 <div class="foot"><span>Dive 4</span><span>nssdc.gsfc.nasa.gov · openstax.org/books/astronomy-2e</span><span></span></div><div class="rulebar"></div>

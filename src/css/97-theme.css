@@ -1,0 +1,64 @@
+/* ===== colour & life: each section gets its own palette ===== */
+.slide[class*=" th-"]{background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 55%,var(--g3) 100%)}
+.slide[class*=" th-"] .b1{background:radial-gradient(circle,var(--c1),transparent 66%);opacity:.9}
+.slide[class*=" th-"] .b2{background:radial-gradient(circle,var(--c2),transparent 64%);opacity:.9}
+.slide[class*=" th-"] .b3{background:radial-gradient(circle,var(--c3),transparent 66%);opacity:.75}
+.slide[class*=" th-"] .b4{background:radial-gradient(circle,var(--c4),transparent 66%);opacity:.9}
+.slide[class*=" th-"] .b5{background:radial-gradient(circle,var(--c2),transparent 64%);opacity:.7}
+.slide[class*=" th-"] .blob{animation-duration:16s!important}
+.slide[class*=" th-"] .veil{background:linear-gradient(178deg,rgba(255,255,255,.34) 0%,rgba(255,255,255,.06) 50%,rgba(255,255,255,.18) 100%)}
+.slide[class*=" th-"] .lattice{opacity:.22}
+.slide[class*=" th-"] .ribbon{opacity:.28}
+.slide[class*=" th-"] .rb1{stroke:var(--r1)}.slide[class*=" th-"] .rb2{stroke:var(--r2)}
+.slide[class*=" th-"] h2 .lt{color:var(--lt)}
+.slide[class*=" th-"] .eyebrow{color:var(--eb)}
+.slide[class*=" th-"] .rulebar{background:linear-gradient(90deg,var(--r1),var(--r2),var(--c4))}
+
+.th-sunrise{--g1:#FFF3E2;--g2:#FFE6EE;--g3:#F1E6FF;--c1:rgba(255,154,61,.55);--c2:rgba(255,99,146,.42);--c3:rgba(167,112,255,.35);--c4:rgba(255,206,84,.6);--r1:#F2A93B;--r2:#E8578A;--lt:#9A4A6B;--eb:#B4521E}
+.th-lagoon{--g1:#E4FBF6;--g2:#E2F1FF;--g3:#EEE9FF;--c1:rgba(43,179,163,.5);--c2:rgba(61,150,255,.42);--c3:rgba(120,90,255,.3);--c4:rgba(110,231,183,.55);--r1:#2BB3A3;--r2:#3D7BFF;--lt:#2C6E85;--eb:#127A6E}
+.th-potion{--g1:#F5ECFF;--g2:#FFE7F5;--g3:#E5F6FF;--c1:rgba(155,89,255,.5);--c2:rgba(255,92,178,.42);--c3:rgba(43,179,163,.38);--c4:rgba(255,190,70,.55);--r1:#9B59FF;--r2:#FF5CB2;--lt:#7B4AB8;--eb:#7A2FD0}
+.th-indigo{--g1:#ECEEFF;--g2:#E5F0FF;--g3:#F4E9FF;--c1:rgba(61,86,214,.5);--c2:rgba(130,90,255,.4);--c3:rgba(43,179,163,.3);--c4:rgba(242,169,59,.5);--r1:#3D56D6;--r2:#8A5CFF;--lt:#4A55A8;--eb:#2E3A8C}
+.th-sky{--g1:#E3F3FF;--g2:#EEF6FF;--g3:#FFF0E2;--c1:rgba(56,160,255,.5);--c2:rgba(255,150,80,.42);--c3:rgba(120,200,255,.4);--c4:rgba(255,200,90,.55);--r1:#2E8BEA;--r2:#FF8A3D;--lt:#2D6FA8;--eb:#1F5F9E}
+.th-meadow{--g1:#EAFBE8;--g2:#E6FAF4;--g3:#F4FBE2;--c1:rgba(76,201,110,.5);--c2:rgba(43,179,163,.45);--c3:rgba(180,220,60,.4);--c4:rgba(255,214,90,.5);--r1:#34B866;--r2:#2BB3A3;--lt:#2F7A4C;--eb:#1F7A44}
+.th-cosmos{--g1:#EBE9FF;--g2:#E4ECFF;--g3:#FFEFE0;--c1:rgba(98,80,230,.5);--c2:rgba(255,170,60,.45);--c3:rgba(70,140,255,.35);--c4:rgba(255,120,150,.4);--r1:#6250E6;--r2:#FFAA3C;--lt:#5546B8;--eb:#4535B5}
+.th-signal{--g1:#FFF7E3;--g2:#EAFBEF;--g3:#FFECEA;--c1:rgba(242,169,59,.55);--c2:rgba(52,184,102,.42);--c3:rgba(232,87,87,.3);--c4:rgba(255,214,90,.5);--r1:#F2A93B;--r2:#34B866;--lt:#8A5A12;--eb:#A2610A}
+.th-coral{--g1:#FFEEE9;--g2:#FFF3E3;--g3:#EAF0FF;--c1:rgba(255,120,100,.45);--c2:rgba(255,180,80,.45);--c3:rgba(90,130,255,.3);--c4:rgba(255,150,190,.45);--r1:#FF7A64;--r2:#F2A93B;--lt:#A2503F;--eb:#B2452F}
+/* dark slides: aurora */
+.slide.dark.th-aurora{background:radial-gradient(120% 120% at 15% 10%,#1F5E7A 0%,#1A2366 40%,#2A1250 75%,#120A2E 100%)}
+.slide.dark.th-aurora .b1{background:radial-gradient(circle,rgba(43,179,163,.55),transparent 66%)}
+.slide.dark.th-aurora .b2{background:radial-gradient(circle,rgba(155,89,255,.5),transparent 64%)}
+.slide.dark.th-aurora .b4{background:radial-gradient(circle,rgba(255,92,178,.4),transparent 66%)}
+.slide.dark.th-aurora .blob{animation-duration:14s!important}
+
+/* ===== official KFAS + 50th anniversary logos ===== */
+.kbadge{position:absolute;top:22px;right:30px;z-index:6;display:flex;align-items:center;gap:12px;pointer-events:none;padding:6px 12px;border-radius:14px;background:rgba(255,255,255,.72);box-shadow:0 6px 18px -10px rgba(20,26,51,.35);backdrop-filter:blur(8px)}
+.kbadge img{display:block;height:34px;width:auto}
+.kbadge img.k50{height:36px}
+.kbadge i{width:1px;height:26px;background:rgba(20,26,51,.2)}
+.dark .kbadge{background:rgba(255,255,255,.08);box-shadow:none}
+.dark .kbadge i{background:rgba(255,255,255,.3)}
+.klockup{display:inline-flex;align-items:center;gap:16px;margin-right:6px}
+.klockup img{display:block;width:auto}
+.klockup .k50{height:64px}.klockup .kk{height:52px}
+.klockup i{width:2px;height:44px;background:rgba(255,255,255,.35);display:block}
+
+/* ===== everything clickable looks clickable ===== */
+.btn,.tabs button,.pv-seg button,.pp,.flip,.ring,[data-go],.qr-link,a.btn,.rmnode,.cs-card,.st-tile,button{cursor:pointer}
+.btn,.tabs button,.pv-seg button{transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.btn:hover,.tabs button:hover,.pv-seg button:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(20,26,51,.45);filter:brightness(1.05)}
+.btn:active,.tabs button:active{transform:translateY(0) scale(.98)}
+.slide.on .btn.a{position:relative;isolation:isolate}
+.slide.on .btn.a::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(242,169,59,.75);opacity:0;z-index:-1;animation:tapPulse 2.6s ease-out 1.2s infinite;pointer-events:none}
+@keyframes tapPulse{0%{opacity:.85;transform:scale(1)}70%{opacity:0;transform:scale(1.18)}100%{opacity:0}}
+.qr-link{position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.qr-link:hover{transform:scale(1.035);box-shadow:0 0 0 4px rgba(242,169,59,.7),0 18px 40px -16px rgba(0,0,0,.5)}
+.qr-link::after{content:'↗ click to open';position:absolute;left:50%;bottom:-2px;transform:translate(-50%,100%);white-space:nowrap;font:700 12px var(--ui);letter-spacing:.06em;color:#fff;background:#F2A93B;color:#1B1F3B;padding:3px 10px;border-radius:100px;opacity:0;transition:opacity .18s;pointer-events:none;z-index:3}
+.qr-link:hover::after{opacity:1}
+.mark.has-lockup{top:22px}
+/* hover affordances for click targets that are not buttons */
+.pp,.fig[data-go],.ptiles .fig,.rmnode,.ring,.flag,.cs-card,.wormbox,.tk-worm{transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.pp:hover,.ptiles .fig:hover,.cs-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px -14px rgba(20,26,51,.5)}
+.flag{cursor:pointer;text-decoration:underline dotted rgba(192,57,43,.6);text-underline-offset:4px}
+.flag:hover{filter:brightness(1.05);box-shadow:0 0 0 3px rgba(242,169,59,.45)}
+.ptiles .fig::before{content:'click to open';position:absolute;right:12px;top:12px;z-index:3;font:700 12px var(--ui);color:#1B1F3B;background:#F2A93B;padding:4px 10px;border-radius:100px;opacity:.0;transition:opacity .15s}
+.ptiles .fig:hover::before{opacity:1}

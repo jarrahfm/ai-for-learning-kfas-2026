@@ -1,9 +1,9 @@
 <!-- 10 DIVE 2 AVIATION TAKE-OFF -->
-<section class="slide" id="dive-takeoff" data-notes="&lt;b&gt;Dive 2, 4:50 to 4:54.&lt;/b&gt; Guess first: on a 45°C Kuwait afternoon, does the plane need more or less runway? Press Take off at 15°C, then at 45°C. Hot air is thinner, so less lift at the same speed. Show lift versus weight bars. 3D tab for the chase view. Verify tab: NASA lift equation.">
+<section class="slide" id="dive-takeoff" data-notes="&lt;b&gt;Dive 2, 4:50 to 4:54.&lt;/b&gt; Guess first: on a 45°C Kuwait afternoon, does the plane need more or less runway? Press Take off at 15°C, then at 45°C. Hot air is thinner, so less lift at the same speed. Show lift versus weight bars. 3D tab for the chase view. Verify tab: NASA lift equation. &lt;br&gt;&lt;b&gt;Advanced: zoom tab&lt;/b&gt; (gradient button): press Play for one continuous real-scale zoom, runway 4.2 km wide, to the A320neo (37.57 m), into the wing airfoil (chord, angle of attack, pressure, stall), the boundary layer, down to air molecules (300 nm view). Or use Prev / Next stop and the zoom slider. Side panel shows the term, definition and source for each stop; the prompt is in the collapsible box with a Copy button. Airfoil chord, boundary-layer thickness and molecule size are illustrative.">
 <div class="mark"><b>Dive 2 · Aviation</b><i></i><span>How a plane takes off</span></div>
 <div class="pad" style="padding-top:78px">
   <div class="head"><div><h2 style="font-size:32px">How a plane takes off <span class="lt">Lift = ½ ρ v² S C<sub>L</sub></span></h2></div>
-    <div class="tabs" data-dive="av"><button class="sel" data-p="2d">2D runway</button><button data-p="3d">3D chase</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+    <div class="tabs" data-dive="av"><button class="sel" data-p="2d">2D runway</button><button data-p="3d">3D chase</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button><button class="avz-tab" data-p="adv">Advanced: zoom</button></div></div>
   <div class="pane on" data-p="2d"><div class="dive">
     <div class="view"><canvas id="avC" width="860" height="440"></canvas><div class="readout" id="avRead">speed <b>0 km/h</b> (0 kt)<br>air density 1.225 kg/m³ at 15 °C<br>runway used 0 m / 3000 m  (time ×2)</div><div class="sim-note">Simplified A320-class model</div></div>
     <div class="g side">
@@ -38,6 +38,36 @@
       <tr><td>Lift-off speed about 140 knots at 70 t</td><td>Computed from the equation; real airline figures vary by type and runway</td><td><span class="lab u">UNCERTAIN</span></td></tr>
       <tr><td>This run length equals a real A320 take-off distance</td><td>No: constant thrust, no safety margins (V1, VR, V2), no wind. Real runs are longer</td><td><span class="lab x">UNSUPPORTED</span></td></tr></tbody></table></div>
   </div></div>
+  <div class="pane" data-p="adv"><div class="dive avz">
+    <div class="view"><canvas id="avzC" width="764" height="432"></canvas>
+      <div class="avz-hud" id="avzHud">view width <b>4.2 km</b></div><div class="sim-note">Real scale &middot; side view</div>
+      <div class="avz-src">Sources:
+        <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/" target="_blank" rel="noopener">NASA Four forces</a>
+        <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/" target="_blank" rel="noopener">NASA Lift equation</a>
+        <a href="https://www.grc.nasa.gov/WWW/k-12/WindTunnel/WTExpKids/tsld006.htm" target="_blank" rel="noopener">NASA Lift vs angle of attack</a>
+        <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bernoulli-and-newton/" target="_blank" rel="noopener">NASA Bernoulli &amp; Newton</a>
+        <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/boundary-layer/" target="_blank" rel="noopener">NASA Boundary layer</a>
+        <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/air-properties-definitions/" target="_blank" rel="noopener">NASA Air properties</a>
+        <a href="https://aircraft.airbus.com/en/aircraft/a320-family/a320neo" target="_blank" rel="noopener">Airbus A320neo</a>
+        <a href="https://openstax.org/books/university-physics-volume-2/pages/2-2-pressure-temperature-and-rms-speed" target="_blank" rel="noopener">OpenStax Univ. Physics 2, &sect;2.2</a>
+        <a href="https://www.ngdc.noaa.gov/stp/space-weather/online-publications/miscellaneous/afrl_publications/handbook_1985/Chptr14.pdf" target="_blank" rel="noopener">US Std Atmosphere 1976</a></div></div>
+    <div class="g side avz-side">
+      <div class="avz-k" id="avzK">Stop 1 / 7 &middot; Runway</div>
+      <div class="avz-term" id="avzTerm">Lift and weight</div>
+      <div class="avz-def" id="avzDef"></div>
+      <div class="avz-fact" id="avzFact"></div>
+      <div class="avz-cite">Source: <a id="avzCite" href="#" target="_blank" rel="noopener"></a></div>
+      <div class="avz-bot">
+        <div class="avz-ctl"><button class="btn sm" id="avzPrev">&#9664; Prev</button><button class="btn a avz-play" id="avzPlay">&#9654; Play</button><button class="btn sm avz-next" id="avzNext">Next &#9654;</button></div>
+        <label class="avz-zl" for="avzZ">Zoom (log scale) <b id="avzZv">4.2 km</b></label><input type="range" id="avzZ" min="0" max="1000" step="1" value="0">
+        <details class="avz-pr"><summary>The prompt for this advanced view</summary><div class="avz-pbox"><div class="code" id="avzPrompt">ROLE: Act as a science-visualisation developer and an aeronautics tutor.
+TASK: Build ONE self-contained HTML file (canvas, no libraries) that zooms continuously, at real scale, from a 3 km runway to an A320-class airliner, into the wing cross-section (airfoil), into the boundary layer on the wing skin, down to air molecules.
+CONTEXT: First-year university students learning how a plane takes off, using the lift equation L = &frac12; &rho; v&sup2; S C_L. Viewed on a projector at 1280x720.
+CONSTRAINTS: One camera, smooth eased log-scale zoom, no slideshow cuts. A live scale bar whose unit changes (km, m, cm, mm, &micro;m, nm). Seven zoom stops: runway, aircraft, airfoil, pressure, stall, boundary layer, molecules. At each stop show the exact term, a one-line definition and a citation. Use only numbers and definitions you can cite from NASA Glenn's Beginner's Guide to Aeronautics, Airbus A320neo key figures, OpenStax University Physics 2 and the U.S. Standard Atmosphere 1976. Clearly label what is illustrative (airfoil chord, boundary-layer thickness, molecule size and spacing). Play/Pause, Previous/Next stop, and a log zoom slider.
+FORMAT: The HTML file, then a table of every number and definition with its source URL.
+CHECK: List every claim I must verify myself, and every part that is not drawn to scale.</div><button class="btn sm" id="avzCopy" style="align-self:flex-start">Copy prompt</button></div></details>
+      </div>
+    </div></div></div>
 </div>
 <div class="foot"><span>Dive 2</span><span>grc.nasa.gov · openstax.org</span><span></span></div><div class="rulebar"></div>
 </section>

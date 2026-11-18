@@ -1,0 +1,44 @@
+/* Dive 2 aviation: Advanced zoom tab (scoped to #dive-takeoff) */
+#dive-takeoff .tabs button{cursor:pointer;transition:transform .15s,box-shadow .15s}
+#dive-takeoff .tabs button:hover{transform:translateY(-1px);box-shadow:0 4px 12px -4px rgba(27,31,59,.35)}
+#dive-takeoff .tabs button.avz-tab{position:relative;overflow:hidden;color:#fff;border-color:transparent;background:linear-gradient(110deg,#2E3A8C,#3D56D6 45%,#2BB3A3 80%,#F2A93B);box-shadow:0 6px 18px -6px rgba(61,86,214,.7)}
+#dive-takeoff .tabs button.avz-tab::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);animation:avzShim 2.9s ease-in-out infinite;pointer-events:none}
+#dive-takeoff .tabs button.avz-tab:hover{transform:translateY(-2px);box-shadow:0 10px 22px -6px rgba(43,179,163,.85)}
+#dive-takeoff .tabs button.avz-tab.sel{background:linear-gradient(110deg,#1B1F3B,#2E3A8C 55%,#2BB3A3);box-shadow:0 0 0 2px #F2A93B inset}
+@keyframes avzShim{0%{left:-60%}55%,100%{left:130%}}
+
+#dive-takeoff .avz{grid-template-columns:1fr 330px}
+#dive-takeoff .avz .view{min-height:0;height:432px;background:#0B1026;border:1px solid rgba(143,160,240,.35);box-shadow:0 18px 40px -18px rgba(11,16,38,.7)}
+#dive-takeoff .avz canvas{height:432px}
+#dive-takeoff .avz .sim-note{background:rgba(11,16,38,.72);color:#DDE4FF}
+#dive-takeoff .avz-hud{position:absolute;left:14px;top:12px;background:rgba(11,16,38,.74);color:#fff;border:1px solid rgba(143,160,240,.3);border-radius:12px;padding:6px 12px;font:500 14px var(--mono);line-height:1.5;pointer-events:none}
+#dive-takeoff .avz-hud b{color:var(--amber)}
+#dive-takeoff .avz-src{position:absolute;left:0;right:0;bottom:0;padding:6px 12px;background:linear-gradient(0deg,rgba(11,16,38,.92),rgba(11,16,38,.7));color:#C9D3F5;font:500 14px/1.45 var(--ui)}
+#dive-takeoff .avz-src a{color:#9FE7DC;text-decoration:none;border-bottom:1px dotted rgba(159,231,220,.6);cursor:pointer;margin-right:8px}
+#dive-takeoff .avz-src a:hover{color:#fff;border-bottom-color:#fff;text-shadow:0 0 8px rgba(43,179,163,.9)}
+#dive-takeoff .avz-side{position:relative;min-height:0;height:432px;gap:8px;padding:16px 18px}
+#dive-takeoff .avz-k{font:600 14px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--royal)}
+#dive-takeoff .avz-term{font:700 24px/1.15 var(--disp);color:var(--navy);letter-spacing:-.01em}
+#dive-takeoff .avz-def{font-size:17px;line-height:1.42;color:#1B1F3B}
+#dive-takeoff .avz-fact{font:500 14.5px/1.45 var(--mono);color:#1B1F3B;background:rgba(61,86,214,.08);border-left:3px solid var(--teal);border-radius:8px;padding:6px 10px}
+#dive-takeoff .avz-cite{font-size:14px;color:#2A3050}
+#dive-takeoff .avz-cite a{color:var(--royal);font-weight:600;cursor:pointer}
+#dive-takeoff .avz-cite a:hover{color:var(--electric);text-decoration:underline}
+#dive-takeoff .avz-bot{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+#dive-takeoff .avz-ctl{display:flex;gap:6px;align-items:center}
+#dive-takeoff .avz-ctl .btn{cursor:pointer;transition:transform .15s,box-shadow .15s}
+#dive-takeoff .avz-ctl .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px -6px rgba(27,31,59,.5)}
+#dive-takeoff .avz-ctl .btn:disabled{opacity:.4;cursor:default;transform:none;box-shadow:none}
+#dive-takeoff .avz-play{animation:avzPulse 1.8s ease-in-out infinite;min-width:92px;justify-content:center}
+#dive-takeoff .avz-play.on{animation:none}
+#dive-takeoff .avz-next.hint{animation:avzPulse 1.8s ease-in-out infinite}
+@keyframes avzPulse{0%,100%{box-shadow:0 0 0 0 rgba(242,169,59,.65)}50%{box-shadow:0 0 0 9px rgba(242,169,59,0)}}
+#dive-takeoff .avz-zl{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:#1B1F3B}
+#dive-takeoff .avz-zl b{font-family:var(--mono)}
+#dive-takeoff #avzZ{width:100%;cursor:pointer;accent-color:var(--electric)}
+#dive-takeoff .avz-pr summary{cursor:pointer;font:600 14px var(--ui);color:var(--royal);padding:4px 0;list-style:none}
+#dive-takeoff .avz-pr summary::before{content:"+ ";font-weight:700}
+#dive-takeoff .avz-pr[open] summary::before{content:"− "}
+#dive-takeoff .avz-pr summary:hover{color:var(--electric)}
+#dive-takeoff .avz-pr .avz-pbox{position:absolute;left:10px;right:10px;top:10px;bottom:44px;z-index:5;background:#fff;border-radius:14px;border:1px solid rgba(20,26,51,.14);box-shadow:0 14px 34px -12px rgba(11,16,38,.45);padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+#dive-takeoff .avz-pr .code{font-size:13px;line-height:1.45;overflow:auto;flex:1;color:#1B1F3B}
