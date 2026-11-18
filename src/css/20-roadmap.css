@@ -1,0 +1,30 @@
+/* slide 02: roadmap + Step 0 setup guide (all scoped to #roadmap) */
+#roadmap .rmhead{align-items:flex-end}
+#roadmap .rmhead h2{font-size:48px;line-height:1.08;color:var(--ink)}
+#roadmap .rmsub{font-size:21px;line-height:1.35;color:var(--ink-2);margin-top:8px;font-weight:500}
+#roadmap .rmsetup{display:inline-flex;align-items:center;gap:12px;padding:12px 24px 12px 12px;border-radius:100px;border:none;cursor:pointer;background:var(--amber);color:var(--navy);font:700 21px var(--disp);box-shadow:0 12px 26px -12px rgba(199,125,18,.9);transition:transform .18s,box-shadow .18s;position:relative}
+#roadmap .rmsetup:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 16px 30px -12px rgba(199,125,18,1)}
+#roadmap .rmsetup-i{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px}
+#roadmap .rmsetup::after{content:"";position:absolute;inset:-5px;border-radius:100px;border:3px solid rgba(242,169,59,.7);animation:rmPulse 2s ease-out infinite;pointer-events:none}
+#roadmap .rmsetup.lg{padding:12px 22px;font-size:19px;flex:0 0 auto;margin-left:auto}
+#roadmap .rmsetup.lg::after{display:none}
+@keyframes rmPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.12,1.35);opacity:0}}
+
+#roadmap .rmap{height:282px;margin-top:40px}
+#roadmap .rmnode{width:54px;height:54px;font:700 21px var(--disp);border-width:4px;padding:0;font-family:var(--disp)}
+#roadmap .rmnode span{top:60px;font:700 18px var(--disp);color:var(--navy);letter-spacing:0;background:rgba(255,255,255,.9);padding:1px 8px;border-radius:8px}
+#roadmap .rmnode.up span{top:auto;bottom:60px}
+#roadmap .rmnode.sel span{background:var(--navy);color:#fff}
+#roadmap .rmnode.zero{background:var(--amber);border-color:var(--navy);color:var(--navy)}
+#roadmap .rmnode.zero.sel{background:var(--navy);color:#fff;border-color:var(--amber)}
+#roadmap .rmnode.zero::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:3px solid rgba(242,169,59,.8);animation:rmPulse 2s ease-out infinite;pointer-events:none}
+
+#roadmap .rmdetail{margin-top:12px;padding:16px 24px;gap:20px;min-height:104px;align-items:center}
+#roadmap .rmdetail .n{width:56px;height:56px;font-size:24px}
+#roadmap .rmdetail .rmdt{flex:1 1 auto;min-width:0}
+#roadmap .rmdetail b{font:700 26px var(--disp);color:var(--ink);margin-bottom:4px}
+#roadmap .rmdetail p{font-size:22px;line-height:1.35;color:var(--ink)}
+#roadmap .rmdetail p.how{font-size:19px;color:var(--ink-2);margin-top:4px}
+#roadmap .rmdetail p.how::before{content:"How: ";font-weight:700;color:#177a6e}
+#roadmap .rmdetail.rin{animation:rgIn .35s ease-out}
+@keyframes rgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}

@@ -1,0 +1,45 @@
+<!-- 12 DIVE 4 SPACE: PLANETS IN ORBIT  REV3SPACE -->
+<section class="slide" id="dive-orbits" data-notes="&lt;b&gt;Dive 4, 4:57 to 5:00.&lt;/b&gt; Guess first: a planet twice as far from the Sun as Earth, how long is its year? Press Play. Drag 'your planet' outward and watch its year grow: Kepler's third law, T² = a³. Make the star heavier and everything speeds up. 3D tab: the same clock, seen from space. Verify: NASA planetary fact sheet, OpenStax Astronomy. Then: ten-minute break, log in to your AI.">
+<div class="mark"><b>Dive 4 · Space</b><i></i><span>Planets in orbit</span></div>
+<div class="pad" style="padding-top:78px">
+  <div class="head"><div><h2 style="font-size:32px">Planets in orbit <span class="lt">T² = a³ (Kepler's third law)</span></h2></div>
+    <div class="tabs" data-dive="sp"><button class="sel" data-p="2d">2D orbits</button><button data-p="3d">3D planets</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+  <div class="pane on" data-p="2d"><div class="dive">
+    <div class="view" style="background:radial-gradient(circle at 50% 50%,#1a2150,#070B16 70%)"><canvas id="spC" width="860" height="440"></canvas><div class="readout" id="spRead">t = <b>0.0 Earth years</b><br>your planet: a = 1.00 AU → one year = <b>1.00 Earth years</b><br>speed 29.8 km/s &nbsp; star = 1.0 Suns</div><div class="sim-note">Top view · not to scale</div></div>
+    <div class="g side">
+      <div class="ctl"><label>Your planet: distance from the star <b id="spAv">1.00 AU</b></label><input type="range" id="spA" min="0.3" max="10" step="0.01" value="1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm" data-au="1">Earth</button><button class="btn sm" data-au="1.52">Mars</button><button class="btn sm" data-au="5.2">Jupiter</button><button class="btn sm" data-au="9.54">Saturn</button></div>
+        <label>Star mass <b id="spMv">1.0 Suns</b></label><input type="range" id="spM" min="0.5" max="3" step="0.1" value="1">
+        <label>Speed <b id="spSv">1 year / s</b></label><input type="range" id="spS" min="0.1" max="3" step="0.1" value="1"></div>
+      <div style="display:flex;gap:8px"><button class="btn a" id="spGo">Play</button><button class="btn sm" id="spReset">Reset</button></div>
+      <div class="quiz" id="spQuiz"><b>Guess first:</b> a planet twice as far from the Sun as Earth. One year there lasts...<div class="opts"><button data-a="0">2 Earth years</button><button data-a="1">2.8 Earth years</button><button data-a="2">4 Earth years</button><button data-a="3">8 Earth years</button></div><div class="qa" style="margin-top:6px;display:none">2.8 years: T = √(2³) = √8 ≈ 2.83. Farther out means a longer path <i>and</i> a slower speed. Drag your planet to 2 AU and count.</div></div>
+    </div></div></div>
+  <div class="pane" data-p="3d"><div class="dive">
+    <div class="view" id="sp3Wrap" style="background:#070B16"><div class="readout" id="sp3Read"></div><div class="sim-note">Three.js · same clock</div></div>
+    <div class="g side"><h3>The same clock, seen from space</h3><p class="note">Every planet here moves with the same T² = a³ rule as the 2D map. Your planet is the white one. Drag to orbit the scene, scroll to zoom.</p>
+      <div class="kv"><span>Rule</span><b>T = √(a³ / M)</b></div><div class="kv"><span>a</span><b>distance, in Earth-distances (AU)</b></div><div class="kv"><span>T</span><b>year length, in Earth years</b></div><div class="kv"><span>Sizes and distances</span><b>not to scale</b></div>
+      <button class="btn t" id="sp3Go" style="margin-top:auto">Play (3D)</button></div>
+  </div></div>
+  <div class="pane" data-p="r"><div class="rl">
+    <div class="pics"><div class="fig"><img data-img="earth" alt="Earth photographed by Apollo 17, the Blue Marble"><div class="big">Earth from Apollo 17, 1972: one lap around the Sun every 365.25 days</div><div class="cap">NASA / Apollo 17 crew, public domain</div></div>
+      <div class="fig"><img data-img="saturn" alt="Saturn photographed by the Cassini spacecraft"><div class="big">Saturn, 9.5 times farther out: a year there is 29 Earth years</div><div class="cap">NASA / JPL / Space Science Institute, public domain</div></div></div>
+    <div class="g"><h3>Where you meet it</h3>
+      <div class="li"><div class="m">1</div><div>Your phone's GPS works because satellites follow exactly this rule around the Earth: engineers choose the height to get the orbit time they want.</div></div>
+      <div class="li"><div class="m a">2</div><div>Mars missions launch only every 26 months, when Earth (1-year orbit) and Mars (1.9-year orbit) line up. The launch window is Kepler's law on a calendar.</div></div>
+      <div class="li"><div class="m">3</div><div>The Kuwait Towers' spheres point at the sky: on a clear night Jupiter and Saturn are visible to the naked eye, moving a little each week, exactly as slowly as the slider predicts.</div></div>
+      <div class="hands"><b>TRY IT WITH YOUR HANDS, TONIGHT</b>Open a free sky app (Stellarium or SkyView), find Jupiter, and note the star it sits next to. Check again in one week. It will have moved: that is a 12-year orbit seen from a 1-year one. Write down what moved, by how much, and label one claim about it.</div></div>
+  </div></div>
+  <div class="pane" data-p="v"><div class="two" style="margin-top:4px">
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">The prompt that built it</div><div class="code" style="font-size:11.5px">Act as an astronomy tutor and a careful web developer. Build ONE single HTML file, no external libraries, that animates planets orbiting a star from above using Kepler's third law, T = √(a³/M) with a in AU, T in years and M in solar masses. Show Mercury to Saturn at their real distances (compressed so they fit), plus "my planet" with a slider for its distance 0.3 to 10 AU, a star-mass slider and a speed slider. Show my planet's year length and orbital speed. I am a first-year student with no coding experience; comment the code simply. List the model's assumptions and what I should verify.</div>
+      <div class="note" style="margin-top:8px">Optional follow-up: "Add a 3D view with Three.js from a CDN using the same clock." The strange words are explained on the ladder slide.</div></div>
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">Verify: what we checked</div>
+      <table class="vtable"><tbody><tr><th>Claim</th><th>Source to open</th><th>Label</th></tr>
+      <tr><td>T² = a³ for planets round the Sun</td><td>OpenStax Astronomy 2e, §3.1 Kepler's laws</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Mars at 1.52 AU has a year of 1.88 Earth years</td><td>NASA Planetary Fact Sheet; √(1.52³) = 1.87 by hand</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Saturn's year is about 29 Earth years</td><td>NASA Planetary Fact Sheet (29.4 years)</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>The orbits are perfect circles</td><td>Simplification: real orbits are ellipses (Kepler's first law)</td><td><span class="lab x">UNSUPPORTED</span></td></tr>
+      <tr><td>A ninth large planet exists beyond Neptune</td><td>Proposed (Batygin &amp; Brown 2016); not yet observed</td><td><span class="lab u">UNCERTAIN</span></td></tr></tbody></table></div>
+  </div></div>
+</div>
+<div class="foot"><span>Dive 4</span><span>nssdc.gsfc.nasa.gov · openstax.org/books/astronomy-2e</span><span></span></div><div class="rulebar"></div>
+</section>

@@ -1,0 +1,43 @@
+<!-- 10 DIVE 2 AVIATION TAKE-OFF -->
+<section class="slide" id="dive-takeoff" data-notes="&lt;b&gt;Dive 2, 4:50 to 4:54.&lt;/b&gt; Guess first: on a 45°C Kuwait afternoon, does the plane need more or less runway? Press Take off at 15°C, then at 45°C. Hot air is thinner, so less lift at the same speed. Show lift versus weight bars. 3D tab for the chase view. Verify tab: NASA lift equation.">
+<div class="mark"><b>Dive 2 · Aviation</b><i></i><span>How a plane takes off</span></div>
+<div class="pad" style="padding-top:78px">
+  <div class="head"><div><h2 style="font-size:32px">How a plane takes off <span class="lt">Lift = ½ ρ v² S C<sub>L</sub></span></h2></div>
+    <div class="tabs" data-dive="av"><button class="sel" data-p="2d">2D runway</button><button data-p="3d">3D chase</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+  <div class="pane on" data-p="2d"><div class="dive">
+    <div class="view"><canvas id="avC" width="860" height="440"></canvas><div class="readout" id="avRead">speed <b>0 km/h</b> (0 kt)<br>air density 1.225 kg/m³ at 15 °C<br>runway used 0 m / 3000 m  (time ×2)</div><div class="sim-note">Simplified A320-class model</div></div>
+    <div class="g side">
+      <div class="ctl"><label>Air temperature <b id="avTv">15 °C</b></label><input type="range" id="avT" min="-10" max="50" step="1" value="15">
+        <label>Mass <b id="avMv">70 t</b></label><input type="range" id="avM" min="50" max="80" step="1" value="70">
+        <label><span>Flaps (lift coefficient C<sub>L</sub>)</span> <b id="avCv">1.8</b></label><input type="range" id="avCL" min="1.2" max="2.4" step="0.1" value="1.8">
+        <label>Thrust <b id="avThv">100 %</b></label><input type="range" id="avTh" min="60" max="100" step="1" value="100"></div>
+      <div style="display:flex;gap:8px"><button class="btn a" id="avGo">Take off</button><button class="btn sm" id="avReset">Reset</button></div>
+      <div class="quiz" id="avQuiz"><b>Guess first:</b> at 45 °C instead of 15 °C, the take-off run gets...<div class="opts"><button data-a="0">shorter</button><button data-a="1">the same</button><button data-a="2">longer</button></div><div class="qa" style="margin-top:6px;display:none">Longer. Hot air is less dense, so each metre per second of speed makes less lift. Pilots call it a hot-and-high day.</div></div>
+    </div></div></div>
+  <div class="pane" data-p="3d"><div class="dive">
+    <div class="view" id="av3Wrap"><div class="readout" id="av3Read"></div><div class="sim-note">Three.js · chase camera</div></div>
+    <div class="g side"><h3>Chase view</h3><p class="note">Press Take off on the 2D tab first, then watch the same run from behind the aircraft. The 3D scene reads the same speed, lift and altitude numbers; it adds nothing to the physics, only to the feeling.</p>
+      <div class="kv"><span>Lift-off when</span><b>Lift &gt; Weight</b></div><div class="kv"><span>Weight</span><b>m × 9.81</b></div><div class="kv"><span>Air density</span><b>falls as temperature rises</b></div>
+      <button class="btn t" id="av3Go" style="margin-top:auto">Take off (3D)</button></div>
+  </div></div>
+  <div class="pane" data-p="r"><div class="rl">
+    <div class="pics"><div class="fig"><img data-img="a320" alt="Airbus A320 climbing after take-off"><div class="big">A320 just after rotation: lift has beaten weight</div><div class="cap">Julian Herzog, CC BY 4.0</div></div>
+      <div class="fig"><img data-img="kuwaitair" alt="Kuwait Airways Airbus A340 in flight"><div class="big">Kuwait Airways: a 45 °C afternoon changes the take-off maths</div><div class="cap">Aeroprints.com, CC BY-SA 3.0</div></div></div>
+    <div class="g"><h3>Where you meet it</h3>
+      <div class="li"><div class="m">1</div><div>Kuwait summers reach 45 to 50 °C. Thin, hot air means less lift per metre of runway, so airlines limit weight or prefer cooler departure hours on the hottest days.</div></div>
+      <div class="li"><div class="m a">2</div><div>Flaps are the slats and panels you see sliding out of the wing before take-off: they raise C<sub>L</sub>, which is exactly the slider you moved.</div></div>
+      <div class="li"><div class="m">3</div><div>Next flight, count the seconds from brakes-off to lift-off and look at the runway markers. Then compare with the simulation's number.</div></div>
+      <div class="hands"><b>TRY IT WITH YOUR HANDS</b>Fold two identical paper planes. On one, bend the back edge of both wings up a little (flaps). Launch them the same way ten times each. Which lifts off earlier? Which flies further? Write one sentence on why they differ, then verify it against the lift equation.</div></div>
+  </div></div>
+  <div class="pane" data-p="v"><div class="two" style="margin-top:4px">
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">The prompt that built it</div><div class="code" style="font-size:11.5px">Act as an aeronautics tutor and a careful web developer. Build ONE single HTML file, no external libraries, that simulates an airliner take-off run in 2D side view. Use Lift = ½ρv²SC_L, Weight = mg, constant thrust minus drag and rolling friction. Sliders: air temperature (change air density with the ideal gas law), mass 50 to 80 t, flap setting as C_L 1.2 to 2.4, thrust 60 to 100%. Wing area 122.6 m². Show speed in km/h and knots, lift vs weight bars, runway used vs 3000 m. Lift off when lift exceeds weight. I am a first-year student, no coding. List the model's assumptions and what I should verify.</div></div>
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">Verify: what we checked</div>
+      <table class="vtable"><tbody><tr><th>Claim</th><th>Source</th><th>Label</th></tr>
+      <tr><td>Lift = ½ ρ v² S C<sub>L</sub></td><td>NASA Glenn Research Center, "The Lift Equation"</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Hot air is less dense, so take-off runs lengthen</td><td>Ideal gas law (OpenStax Chemistry 2e §9.2); NASA Glenn air-density pages</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Lift-off speed about 140 knots at 70 t</td><td>Computed from the equation; real airline figures vary by type and runway</td><td><span class="lab u">UNCERTAIN</span></td></tr>
+      <tr><td>This run length equals a real A320 take-off distance</td><td>No: constant thrust, no safety margins (V1, VR, V2), no wind. Real runs are longer</td><td><span class="lab x">UNSUPPORTED</span></td></tr></tbody></table></div>
+  </div></div>
+</div>
+<div class="foot"><span>Dive 2</span><span>grc.nasa.gov · openstax.org</span><span></span></div><div class="rulebar"></div>
+</section>

@@ -1,0 +1,8 @@
+tools/node_modules/
+original/
+shots/
+preview/_src/node_modules/
+assets/gpt/
+.mercury/
+*.log
+preview/

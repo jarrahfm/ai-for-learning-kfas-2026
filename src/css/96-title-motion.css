@@ -1,0 +1,6 @@
+/* title backdrop: slow drifting camera + twinkling knowledge particles */
+#s-title .ttl-bg{overflow:hidden}
+#s-title .ttl-bg img{transform-origin:70% 60%;will-change:transform}
+#s-title.on .ttl-bg img{animation:ttlDrift 26s ease-in-out infinite alternate}
+@keyframes ttlDrift{0%{transform:scale(1.04) translate3d(0,0,0)}100%{transform:scale(1.16) translate3d(-34px,-10px,0)}}
+#s-title .ttl-fx{position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%}

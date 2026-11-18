@@ -1,0 +1,45 @@
+<!-- 9 DIVE 1 PHYSICS PENDULUM -->
+<section class="slide" id="dive-pendulum" data-notes="&lt;b&gt;Dive 1, 4:46 to 4:50.&lt;/b&gt; Guess first: if I double the length, does the period double? Run it. Change the mass: nothing. Moon: slow motion. 3D tab: same equation, seen in space. Verify tab: the prompts that built this, and the labelled claims. Compare with PhET.">
+<div class="mark"><b>Dive 1 · Physics</b><i></i><span>The pendulum</span></div>
+<div class="pad" style="padding-top:78px">
+  <div class="head"><div><h2 style="font-size:32px">The pendulum <span class="lt">T = 2π√(L/g)</span></h2></div>
+    <div class="tabs" data-dive="pd"><button class="sel" data-p="2d">2D lab</button><button data-p="3d">3D view</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+  <div class="pane on" data-p="2d"><div class="dive">
+    <div class="view"><canvas id="pdC" width="860" height="440"></canvas><div class="readout" id="pdRead">T = 2π√(L/g) = <b>2.18 s</b><br>f = 0.46 Hz &nbsp; g = 25.00 m/s²<br>mass = 5.0 kg (no effect on T)</div><div class="sim-note">Built by an AI from a 6-part prompt</div></div>
+    <div class="g side">
+      <div class="ctl"><label>Length L <b id="pdLv">3.00 m</b></label><input type="range" id="pdL" min="0.2" max="3" step="0.01" value="3">
+        <label>Gravity g <b id="pdGv">25.00 m/s²</b></label><input type="range" id="pdG" min="1" max="25" step="0.01" value="25">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm" data-g="9.81">Earth</button><button class="btn sm" data-g="1.62">Moon</button><button class="btn sm" data-g="3.71">Mars</button><button class="btn sm" data-g="24.79">Jupiter</button></div>
+        <label>Mass <b id="pdMv">5.0 kg</b></label><input type="range" id="pdM" min="0.2" max="5" step="0.1" value="5">
+        <label>Amplitude <b id="pdAv">20°</b></label><input type="range" id="pdA" min="2" max="20" step="1" value="20"></div>
+      <div class="quiz" id="pdQuiz"><b>Guess first:</b> if I double the length, the period becomes...<div class="opts"><button data-a="0">the same</button><button data-a="1">1.41×</button><button data-a="2">2×</button><button data-a="3">4×</button></div><div class="qa" style="margin-top:6px;display:none">√2 ≈ 1.41, because L sits under a square root. Now drag L from 1 m to 2 m and watch T.</div></div>
+    </div></div></div>
+  <div class="pane" data-p="3d"><div class="dive">
+    <div class="view" id="pd3Wrap"><div class="readout" id="pd3Read"></div><div class="sim-note">Three.js · same equation</div></div>
+    <div class="g side"><h3>Same model, seen in space</h3><p class="note">The 3D view uses exactly the same line of maths as the 2D lab. Changing the look does not change the physics. Drag to orbit.</p>
+      <div class="kv"><span>Equation</span><b>T = 2π√(L/g)</b></div><div class="kv"><span>Mass in the equation?</span><b>No</b></div><div class="kv"><span>Valid for</span><b>small swings, below about 15°</b></div>
+      <p class="note" style="margin-top:auto">If 3D does not load, there is no internet: the 2D tab works offline, and that is the one that matters.</p></div>
+  </div></div>
+  <div class="pane" data-p="r"><div class="rl">
+    <div class="pics"><div class="fig"><img data-img="foucault" alt="Foucault pendulum, Pantheon"><div class="big">Foucault's pendulum, Paris: it proves the Earth turns</div><div class="cap">Rsk6400, CC BY-SA 3.0</div></div>
+      <div class="fig"><img data-img="moon" alt="Buzz Aldrin on the Moon, Apollo 11"><div class="big">On the Moon, g is 1.62 m/s²: every swing takes 2.5 times longer</div><div class="cap">NASA / Neil Armstrong, public domain</div></div></div>
+    <div class="g"><h3>Where you meet it</h3>
+      <div class="li"><div class="m">1</div><div>Grandfather clocks keep time with a pendulum about one metre long: one second each way. That is why the metre and the second fit so neatly.</div></div>
+      <div class="li"><div class="m a">2</div><div>A playground swing is a pendulum. Pumping your legs changes the amplitude, not the period. A heavier friend does not swing slower.</div></div>
+      <div class="li"><div class="m">3</div><div>Seismometers and metronomes, and Foucault's 67-metre pendulum in Paris, which showed in 1851 that the ground beneath it rotates.</div></div>
+      <div class="hands"><b>TRY IT WITH YOUR HANDS, TONIGHT</b>Tie your keys to a shoelace. Hold it at 50 cm, time 10 swings with your phone, divide by 10. Now 100 cm. Did the time double, or grow by about 1.4? Then swap the keys for something heavier. Send me the three numbers with your mission.</div></div>
+  </div></div>
+  <div class="pane" data-p="v"><div class="two" style="margin-top:4px">
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">The prompt that built it</div><div class="code" style="font-size:11.5px">Act as a physics tutor and a careful web developer. Build ONE single HTML file, no external libraries, that animates a simple pendulum using T = 2π√(L/g). Sliders: length 0.2 to 3 m, gravity 1 to 25 m/s² with Earth, Moon, Mars and Jupiter presets, mass, amplitude up to 20°. Show the computed period and a stopwatch. Label every unit. I am a first-year student with no coding experience, so comment the code simply. Finally, list the model's assumptions and what I should verify.</div>
+      <div class="note" style="margin-top:8px">Optional follow-ups (only if you have Wi-Fi and want more): "Add a 3D view with Three.js from a CDN using the same equation." · "Add a guess-the-number challenge before each run." The strange words are explained on the ladder slide.</div></div>
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">Verify: what we checked</div>
+      <table class="vtable"><tbody><tr><th>Claim</th><th>Source</th><th>Label</th></tr>
+      <tr><td>L = 1 m gives T ≈ 2.01 s</td><td>Recomputed by hand; PhET Pendulum Lab timer agrees</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Doubling L multiplies T by √2, not 2</td><td>OpenStax University Physics Vol. 1, §15.4</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Mass has no effect on T</td><td>OpenStax §15.4; HyperPhysics; PhET</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Formula is exact at any angle</td><td>Contradicted: at 90° the real period is about 18% longer</td><td><span class="lab x">UNSUPPORTED</span></td></tr>
+      <tr><td>g in Kuwait is 9.79 m/s²</td><td>Plausible; needs a geodetic source</td><td><span class="lab u">UNCERTAIN</span></td></tr></tbody></table></div>
+  </div></div>
+</div>
+<div class="foot"><span>Dive 1</span><span>openstax.org · phet.colorado.edu</span><span></span></div><div class="rulebar"></div>
+</section>

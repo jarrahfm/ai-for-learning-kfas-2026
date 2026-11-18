@@ -1,0 +1,130 @@
+{
+  "checked_on": "2026-11-18",
+  "method": "Every URL below was opened today with WebFetch and/or a headless browser (Chrome for Testing). Titles are the browser tab titles seen on load. 'Updated' dates are as shown on the page; many vendor docs show no date.",
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "maker": "OpenAI",
+      "free": "yes - Free tier, everyday text chat 'unlimited' with tool limits; can even try without an account in some countries (source: help.openai.com/en/articles/9275245-chatgpt-free-tier-faq, 'ChatGPT is free to use', updated ~10 days ago)",
+      "best_for": "Everyday questions, writing and studying help",
+      "primary": {
+        "url": "https://learn.chatgpt.com/docs/quickstart",
+        "title": "Quickstart | ChatGPT Learn",
+        "verified": "Loads 200, English, official OpenAI docs. Numbered steps: open chatgpt.com and sign in, pick Chat or Work, start a chat or project, send first message (with example prompts). Desktop/Web toggle; links to desktop app page. No date shown, but the site's What's new lists Nov 17 2026 items, so it is current. Note: learn.chatgpt.com/codex/quickstart and the old developers.openai.com/codex/quickstart both redirect here."
+      },
+      "backup": {
+        "url": "https://academy.openai.com/public/courses/ai-foundations-juzjs",
+        "title": "AI Foundations | OpenAI Academy",
+        "verified": "Loads 200 (the /home/courses/ URL redirects to /public/courses/), English. Official OpenAI Academy course, level 'Introduction', ~70 min self-paced, 'No technical background is required'. Covers prompting, context, reviewing output and responsible use; needs a ChatGPT account. Free per OpenAI Help Center 'OpenAI Academy courses' article: 'Yes. Academy courses are free. You must have a ChatGPT account to start a course and save your progress.' Does not walk through sign-up itself."
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "maker": "Anthropic",
+      "free": "yes - Free plan $0 'Free for everyone', limited usage every 5 hours and weekly; chat on web, desktop and mobile (source: claude.com/pricing). Users must be 18+ (help article).",
+      "best_for": "Long reading, writing and careful explanations",
+      "primary": {
+        "url": "https://support.claude.com/en/articles/8114491",
+        "title": "Get started with Claude | Claude Help Center",
+        "verified": "Short URL redirects to /en/articles/8114491-get-started-with-claude. Loads 200, English, 'Updated over 2 weeks ago'. Covers where to access Claude (claude.ai web, desktop for Mac/Windows, iOS/Android), supported locations, age 18+, how to write a prompt and use the chat box, model picker, free-plan 5-hour limit, and beginner tips. Does not show step-by-step account creation."
+      },
+      "backup": {
+        "url": "https://academy.claude.com/courses/claude-101",
+        "title": "Claude 101 · Claude Academy",
+        "verified": "Loads 200, English. Official Anthropic course: 13 lessons, 2.5 hr, 1 quiz, completion badge. Starts with 'What is Claude?' and 'Your first conversation with Claude'. Prerequisite: a Claude account on any plan including Free; 'No prior experience ... needed'. Course page shows no price; sign-in is only needed to save progress. A few lessons (Cowork, Research) need paid plans to try hands-on."
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "maker": "Google",
+      "free": "yes - Free plan '$0/month with a Google Account': Flash-Lite model, image generation and editing, Deep Research, Gemini Live, Canvas (source: gemini.google/us/subscriptions/?hl=en). Some text features work without signing in.",
+      "best_for": "Google account users; Gmail, Docs, Drive",
+      "primary": {
+        "url": "https://support.google.com/gemini/answer/13275745?hl=en",
+        "title": "Use Gemini Apps - Computer - Gemini Apps Help",
+        "verified": "Loads 200, English (keep ?hl=en, because Google pages can open in the visitor's local language; gemini.google opened in Arabic for us without it). Official help: which accounts qualify, what works without sign-in, numbered first-use steps (go to gemini.google.com, type a prompt, attach files, submit), many example prompts. Links to the sign-in article and to Android/iPhone versions. No date shown."
+      },
+      "backup": {
+        "url": "https://support.google.com/gemini/answer/13278668?hl=en",
+        "title": "What you need to sign in to Gemini Apps - Gemini Apps Help",
+        "verified": "Loads 200, English, '(c)2026 Google'. Short official page: account types (personal, work 18+, school if admin enabled) and 3-step sign-in at gemini.google.com. Links to mobile app setup. A text page, not a video: I found no official Google beginner video or free course for the consumer Gemini app (the Google Skills 'Introduction to the Gemini App' course targets Workspace business users and does not cover sign-in)."
+      }
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "maker": "Microsoft",
+      "free": "yes - copilot.com states 'Microsoft Copilot is free with a signed-in Microsoft account' (some features have usage limits; Copilot inside Word/Excel needs a Microsoft 365 subscription). Source: copilot.com home page.",
+      "best_for": "Windows and Microsoft 365 / Office users",
+      "primary": {
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/what-is-microsoft-copilot-app",
+        "title": "Get started with the Microsoft Copilot app | Microsoft Support",
+        "verified": "Loads 200, English. The older long topic URL (.../topic/welcome-to-the-microsoft-365-copilot-app-092599f1-...) redirects here. Covers personal vs work/school accounts, sign-in (Microsoft account, Apple ID or Google account, or work/school), where to get it (Microsoft Store, copilot.com/download for Mac, copilot.com web, iOS and Android stores), and first use (Home, message box, Chat vs Cowork). References the Sept 2026 'Home' update, so it is current. No explicit page date."
+      },
+      "backup": {
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/copilot-tutorial-start-using-copilot",
+        "title": "Copilot tutorial: Start using Copilot | Microsoft Support",
+        "verified": "Loads 200, English. Official Microsoft video, 'Duration: 1 minute 48 seconds  Last updated: September 2026'. Short intro to using Copilot, with links to 'Meet Microsoft Copilot' and 'What you can do with Copilot' videos. Slightly Microsoft 365 oriented and does not show install steps. (Not chosen: Microsoft Learn module 'Get started with Microsoft Copilot' at learn.microsoft.com/en-us/training/modules/get-started-with-copilot, which is beginner level and 31 min but its content is dated Jan 2025.)"
+      }
+    },
+    {
+      "id": "codex",
+      "name": "OpenAI Codex",
+      "maker": "OpenAI",
+      "free": "yes, with limits - 'Codex is included across ChatGPT plans, including Free and Go' (usage limits vary); Codex Cloud is NOT included with Free or Go (source: help.openai.com/en/articles/11369540, updated ~14 days ago). Whether Free users get the CLI is not spelled out officially (third-party sites claim CLI starts at Plus; unverified).",
+      "best_for": "Coding help on your own computer",
+      "primary": {
+        "url": "https://learn.chatgpt.com/codex/cli",
+        "title": "Codex CLI | ChatGPT Learn",
+        "verified": "Redirects to learn.chatgpt.com/docs/codex/cli; loads 200, English, official. 'Get started with Codex CLI' quickstart has 3 steps: install (macOS/Linux curl script, Windows, npm or Homebrew tabs), run codex and choose 'Sign in with ChatGPT', start a first task ('Tell me about this project'). The install tabs render only in a real browser (plain fetch shows a bare 'Install Codex' link). Shows current models (gpt-6.1-sol). Assumes basic terminal use. Note: Codex now lives inside the ChatGPT docs, and the old developers.openai.com/codex/quickstart redirects to the general ChatGPT quickstart, not the Codex one."
+      },
+      "backup": {
+        "url": "https://help.openai.com/en/articles/11369540",
+        "title": "Using Codex with your ChatGPT plan | OpenAI Help Center",
+        "verified": "Short URL redirects to /en/articles/11369540-using-codex-with-your-chatgpt-plan; loads 200 in a browser (plain curl gets 403 bot protection). English, updated ~14 days ago. Explains which plans include Codex, then setup: sign in with ChatGPT, then the per-surface steps (desktop app, CLI: 'run codex and sign in', IDE extension for VS Code and its forks)."
+      }
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "maker": "Anthropic",
+      "free": "no - pricing table shows Claude Code 'No' for Free and 'Yes' for Pro ($20/month, or $17/month billed yearly), Max and Ultra (source: claude.com/pricing). Also works with a pay-per-use Anthropic Console/API account.",
+      "best_for": "Coding with an AI agent in terminal",
+      "primary": {
+        "url": "https://code.claude.com/docs/quickstart",
+        "title": "Quickstart - Claude Code Docs",
+        "verified": "Short URL (without /en/) loads 200 with the same page; canonical is code.claude.com/docs/en/quickstart. English. Install (native script for macOS/Linux/WSL, PowerShell/CMD for Windows, Homebrew/WinGet), check with claude --version, browser login with a Claude subscription or Console account, then first tasks (ask about the codebase, make a small change, use Git). Has 'Pro tips for beginners' and links a terminal guide for people who have never used one. No date shown; native installs auto-update."
+      },
+      "backup": {
+        "url": "https://academy.claude.com/courses/claude-code-101",
+        "title": "Claude Code 101 · Claude Academy",
+        "verified": "Loads 200, English. Official Anthropic course: 12 lessons, 1.5 hr, quiz and badge. Includes 'Installing Claude Code' and 'Your first prompt' for terminal, VS Code, JetBrains, Desktop and web. For 'new developers' as well as experienced ones; prerequisites: basic editor and command-line familiarity, plus a paid Claude account or API key. No course price shown."
+      }
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "maker": "Google",
+      "free": "yes - 'For Individuals $0/month', 'Experience Antigravity without a subscription plan': app, CLI, IDE extensions and SDK, baseline agent quota refreshed weekly, Gemini 3.8 Flash. Note: the free Claude/GPT-OSS models are listed as 'Will be removed on November 18, 2026' (today). Source: antigravity.google/pricing.",
+      "best_for": "Letting AI agents build apps for you",
+      "primary": {
+        "url": "https://antigravity.google/docs/get-started",
+        "title": "Get started | Google Antigravity Docs",
+        "verified": "Redirects to antigravity.google/docs/getting-started; loads 200, English (needs a real browser, which our fetch used). Opens with 'Welcome to Google Antigravity!' and covers each surface: desktop App (download for macOS/Windows/Linux, sign in with a Google Account, pick a role, create a project, first prompt), CLI (install script, agy), IDE extensions and Python SDK. Current: download build 2.33.0, editor versions from 2026. No page date."
+      },
+      "backup": {
+        "url": "https://codelabs.developers.google.com/getting-started-google-antigravity",
+        "title": "Getting Started with Google Antigravity",
+        "verified": "Loads 200, English. Official Google Codelab, 'designed for users and developers of all levels'; needs Chrome and a personal Gmail. Step-by-step with screenshots: install the Antigravity 2.0 app, 'Continue with Google' sign-in, first conversation, then a small Node CLI app. Matches the current app-first 2.0 product. No date shown, and a few UI labels/screenshots are slightly inconsistent, so the official docs win if they differ."
+      }
+    }
+  ],
+  "notes": [
+    "Every link is an official vendor page; none is paywalled. Academy course pages may ask you to sign in to save progress (OpenAI: a ChatGPT account; Claude: optional).",
+    "Age limits matter for a university group: Claude requires 18+. Gemini needs 13+ for personal accounts and 18+ for work accounts.",
+    "Shortest QR-friendly forms: support.claude.com/en/articles/8114491, help.openai.com/en/articles/11369540, code.claude.com/docs/quickstart, learn.chatgpt.com/codex/cli, antigravity.google/docs/get-started. For Google help pages keep ?hl=en so they open in English."
+  ]
+}

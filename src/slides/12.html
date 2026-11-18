@@ -1,0 +1,43 @@
+<!-- 11 DIVE 3 BIOLOGY BACTERIA -->
+<section class="slide" id="dive-bacteria" data-notes="&lt;b&gt;Dive 3, 4:54 to 4:57.&lt;/b&gt; Guess first: one bacterium, dividing every 20 minutes, how many after 6 hours? Press Grow. Exponential until nutrients run out, then the curve flattens: logistic growth. Add antibiotic. 3D tab shows the colony on the dish. Verify: OpenStax Microbiology 9.1 and Biology 45.3.">
+<div class="mark"><b>Dive 3 · Biology</b><i></i><span>Bacteria in a dish</span></div>
+<div class="pad" style="padding-top:78px">
+  <div class="head"><div><h2 style="font-size:32px">Bacteria in a dish <span class="lt">exponential, then logistic</span></h2></div>
+    <div class="tabs" data-dive="bi"><button class="sel" data-p="2d">2D dish</button><button data-p="3d">3D colony</button><button data-p="r">Real life</button><button data-p="v">Prompts &amp; verify</button></div></div>
+  <div class="pane on" data-p="2d"><div class="dive">
+    <div class="view"><canvas id="biC" width="860" height="440"></canvas><div class="readout" id="biRead">t = <b>0.0 h</b> &nbsp; N = <b>1</b> cells<br>doubling 20 min → r = 2.08 /h<br>exponential alone would give 1</div><div class="sim-note">N(t) = K / (1 + ((K − N₀)/N₀) e<sup>−rt</sup>)</div></div>
+    <div class="g side">
+      <div class="ctl"><label>Doubling time <b id="biDv">20 min</b></label><input type="range" id="biD" min="10" max="90" step="5" value="20">
+        <label>Nutrients: carrying capacity K <b id="biKv">1,900</b></label><input type="range" id="biK" min="200" max="3000" step="100" value="1900">
+        <label>Antibiotic at hour <b id="biAv">hour 5</b></label><input type="range" id="biA" min="0" max="10" step="1" value="5">
+        <label>Speed <b id="biSv">1 h / s</b></label><input type="range" id="biS" min="0.25" max="3" step="0.25" value="1"></div>
+      <div style="display:flex;gap:8px"><button class="btn a" id="biGo">Grow</button><button class="btn sm" id="biReset">Reset</button></div>
+      <div class="quiz" id="biQuiz"><b>Guess first:</b> one cell, doubling every 20 min, unlimited food. After 6 hours?<div class="opts"><button data-a="0">about 18</button><button data-a="1">about 1,000</button><button data-a="2">about 260,000</button><button data-a="3">about a million</button></div><div class="qa" style="margin-top:6px;display:none">6 hours = 18 doublings, 2<sup>18</sup> = 262,144. That is why the dish fills so fast, and why nutrients become the limit.</div></div>
+    </div></div></div>
+  <div class="pane" data-p="3d"><div class="dive">
+    <div class="view" id="bi3Wrap"><div class="readout" id="bi3Read"></div><div class="sim-note">Three.js · colony on the agar</div></div>
+    <div class="g side"><h3>The colony in 3D</h3><p class="note">Each sphere is a cluster of cells. The colony grows with the same logistic curve as the 2D graph; when the antibiotic arrives, spheres fade. Drag to orbit.</p>
+      <div class="kv"><span>Exponential phase</span><b>N doubles every generation</b></div><div class="kv"><span>Stationary phase</span><b>N levels off at K</b></div><div class="kv"><span>Ignored here</span><b>lag phase, death phase</b></div>
+      <button class="btn t" id="bi3Go" style="margin-top:auto">Grow (3D)</button></div>
+  </div></div>
+  <div class="pane" data-p="r"><div class="rl">
+    <div class="pics"><div class="fig"><img data-img="ecoli" alt="E. coli bacteria under an electron microscope"><div class="big">E. coli at 10,000×: each rod can split every 20 minutes</div><div class="cap">USDA ARS / Eric Erbe, public domain</div></div>
+      <div class="fig"><img data-img="petri" alt="Scientist examining bacterial colonies on an agar plate"><div class="big">Every dot on this dish grew from one cell</div><div class="cap">CSIRO, CC BY 3.0</div></div></div>
+    <div class="g"><h3>Where you meet it</h3>
+      <div class="li"><div class="m">1</div><div>Lunch left on the desk at 35 °C: a few hundred cells become millions in an afternoon. That is the exponential phase you watched.</div></div>
+      <div class="li"><div class="m a">2</div><div>Finishing the antibiotic course: the slider showed that killing 90% leaves survivors that regrow. Stopping early is the same experiment on yourself.</div></div>
+      <div class="li"><div class="m">3</div><div>Laban, yogurt and sourdough are bacteria growing on purpose, until nutrients run out: the flat part of the curve.</div></div>
+      <div class="hands"><b>TRY IT WITH YOUR HANDS, THIS WEEK</b>Three slices of bread in three zip bags: one touched with washed hands, one with unwashed hands, one wiped on your phone. Seal them, keep them warm, photograph them daily for five days. Which bag fills first, and does growth level off? Label one claim about it.</div></div>
+  </div></div>
+  <div class="pane" data-p="v"><div class="two" style="margin-top:4px">
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">The prompt that built it</div><div class="code" style="font-size:11.5px">Act as a microbiology tutor and a careful web developer. Build ONE single HTML file, no external libraries, that animates bacteria growing in a petri dish with the logistic model N(t) = K / (1 + ((K−N0)/N0)e^(−rt)), where r = ln2 / doubling time. Sliders: doubling time 10 to 90 min, carrying capacity K, an optional antibiotic that kills 90% of cells at a chosen hour, and simulation speed. Draw the dots on the dish and the N(t) graph side by side, and show the exponential curve as a dashed line for comparison. I am a first-year student. List the model's assumptions and what I should verify.</div></div>
+    <div class="g" style="padding:18px 22px"><div class="eyebrow" style="margin-bottom:8px">Verify: what we checked</div>
+      <table class="vtable"><tbody><tr><th>Claim</th><th>Source</th><th>Label</th></tr>
+      <tr><td>E. coli can double in about 20 minutes in ideal conditions</td><td>OpenStax Microbiology, §9.1 "How Microbes Grow"</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Growth is exponential, then levels off at a carrying capacity</td><td>OpenStax Biology 2e, §45.3</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>2<sup>18</sup> = 262,144 cells after 6 hours from one cell</td><td>Recomputed by hand</td><td><span class="lab v">VERIFIED</span></td></tr>
+      <tr><td>Real cultures follow this curve exactly</td><td>No: real growth has a lag phase first and a death phase later</td><td><span class="lab x">UNSUPPORTED</span></td></tr></tbody></table></div>
+  </div></div>
+</div>
+<div class="foot"><span>Dive 3</span><span>openstax.org/books/microbiology · biology-2e</span><span></span></div><div class="rulebar"></div>
+</section>

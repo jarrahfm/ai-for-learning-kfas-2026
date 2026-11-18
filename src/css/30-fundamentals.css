@@ -1,0 +1,126 @@
+/* Slides 3-5: Three habits, What is AI?, How a chatbot works (fundamentals crew) */
+#s-habits h2,#s-whatai h2,#s-chatbot h2{font-size:50px}
+#s-habits .eyebrow,#s-whatai .eyebrow,#s-chatbot .eyebrow{font-size:15px;margin-bottom:12px}
+
+/* ---------- 3 Three habits ---------- */
+#s-habits .hb-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:26px;flex:1;min-height:0}
+#s-habits .hb-card{display:flex;flex-direction:column;padding:0;overflow:visible;transition:transform .25s cubic-bezier(.2,.9,.25,1),opacity .25s,box-shadow .25s}
+#s-habits .hb-pic{position:relative;height:210px;margin:12px 12px 0;border-radius:18px;background:color-mix(in srgb,var(--c) 18%,#fff);display:flex;align-items:center;padding-left:14px}
+#s-habits .hb-pic img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;transition:transform .5s cubic-bezier(.2,.9,.25,1)}
+#s-habits .hb-pic .lottie{width:200px;height:200px;flex:0 0 auto}
+#s-habits .hb-pic .wormbox{position:absolute;right:2px;bottom:2px;width:118px;height:97px;z-index:3;pointer-events:none}
+#s-habits .hb-txt{padding:14px 24px 22px}
+#s-habits .hb-txt h3{font-size:36px;font-weight:700;letter-spacing:-.02em;margin:0 0 10px;display:flex;align-items:center;gap:12px;color:var(--ink)}
+#s-habits .hb-n{width:38px;height:38px;border-radius:50%;background:var(--c);color:var(--navy);font:700 21px var(--disp);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+#s-habits .hb-def{font-size:23px;line-height:1.3;font-weight:600;color:var(--ink);margin:0 0 12px}
+#s-habits .hb-do{font-size:19px;line-height:1.4;color:var(--ink-2);margin:0;padding-top:10px;border-top:3px solid var(--c)}
+#s-habits .hb-do b{color:var(--navy)}
+/* staggered entrance + hover spotlight */
+.slide.on#s-habits .hb-card{animation:hbIn .6s cubic-bezier(.2,.9,.25,1) backwards}
+.slide.on#s-habits .hb-card:nth-child(1){animation-delay:.25s}
+.slide.on#s-habits .hb-card:nth-child(2){animation-delay:.55s}
+.slide.on#s-habits .hb-card:nth-child(3){animation-delay:.85s}
+@keyframes hbIn{from{opacity:0;transform:translateY(40px) rotate(-1.5deg) scale(.96)}}
+#s-habits .hb-row:hover .hb-card{opacity:.6}
+#s-habits .hb-row .hb-card:hover{opacity:1;transform:translateY(-8px) scale(1.03);box-shadow:0 34px 60px -24px rgba(14,20,49,.45),0 0 0 4px var(--c)}
+#s-habits .hb-pic .lottie{transition:transform .5s cubic-bezier(.2,.9,.25,1)}
+#s-habits .hb-card:hover .hb-pic .lottie{transform:scale(1.08)}
+
+/* ---------- 4 What is AI? ---------- */
+#s-whatai .wa-wrap{display:grid;grid-template-columns:560px 1fr;gap:28px;margin-top:24px;flex:1;min-height:0}
+#s-whatai .wa-nest{position:relative;height:100%}
+#s-whatai .wa-box{position:relative;box-sizing:border-box;border-radius:22px;padding:50px 20px 20px 34px;cursor:pointer;transition:opacity .45s,transform .5s cubic-bezier(.2,.9,.25,1),box-shadow .3s;transform-origin:85% 85%}
+#s-whatai .wa-box.wa1{height:100%;background:var(--navy);color:#fff}
+#s-whatai .wa-box.wa2{height:100%;background:var(--electric);color:#fff}
+#s-whatai .wa-box.wa3{height:100%;background:var(--teal);color:var(--navy)}
+#s-whatai .wa-box.wa4{height:100%;background:var(--amber);color:var(--navy);display:flex;flex-direction:column}
+#s-whatai .wa-lab{position:absolute;left:20px;top:12px;font:700 22px var(--disp);letter-spacing:-.01em;white-space:nowrap}
+#s-whatai .wa-tools{margin-top:auto;font:600 19px var(--disp);background:#fff;color:var(--navy);border-radius:12px;padding:10px 14px;align-self:flex-start}
+#s-whatai .wa-box.hid{opacity:0;transform:scale(.6);pointer-events:none}
+#s-whatai .wa-box.sel{box-shadow:0 0 0 5px #fff,0 0 0 9px var(--c,#F2A93B),0 20px 40px -12px rgba(14,20,49,.5)}
+#s-whatai .wa-box.wa1.sel{--c:#8FA0F0}
+#s-whatai .wa-box.wa2.sel{--c:#1B1F3B}
+#s-whatai .wa-box.wa3.sel{--c:#1B1F3B}
+#s-whatai .wa-box.wa4.sel{--c:#1B1F3B}
+#s-whatai .wa-box.wa1.sel{box-shadow:0 0 0 5px #fff,0 0 0 9px var(--electric)}
+#s-whatai .wa-detail{padding:30px 34px;display:flex;flex-direction:column;border-top:10px solid var(--kc,var(--navy))}
+#s-whatai .wa-detail.k0{--kc:var(--navy)}
+#s-whatai .wa-detail.k1{--kc:var(--electric)}
+#s-whatai .wa-detail.k2{--kc:var(--teal)}
+#s-whatai .wa-detail.k3{--kc:var(--amber)}
+#s-whatai .wa-ix{font:700 15px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--royal);margin-bottom:10px}
+#s-whatai .wa-detail h3{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink)}
+#s-whatai .wa-def{font-size:25px;line-height:1.35;color:var(--ink);font-weight:500;margin:0 0 20px}
+#s-whatai .wa-ex{background:#FFF6E6;border:2px solid var(--amber);border-radius:16px;padding:14px 18px;font-size:22px;line-height:1.38;color:var(--ink)}
+#s-whatai .wa-ex b{display:block;font:700 14px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8A5300;margin-bottom:6px}
+#s-whatai .wa-nav{margin-top:auto;display:flex;gap:12px;padding-top:18px}
+#s-whatai .wa-nav .btn{font-size:18px;padding:12px 22px}
+#s-whatai .wa-nav .btn:disabled{opacity:.35;cursor:default}
+#s-whatai .wa-detail.swap h3,#s-whatai .wa-detail.swap .wa-def,#s-whatai .wa-detail.swap .wa-ex{animation:waIn .45s cubic-bezier(.2,.9,.25,1) backwards}
+#s-whatai .wa-detail.swap .wa-def{animation-delay:.06s}
+#s-whatai .wa-detail.swap .wa-ex{animation-delay:.12s}
+@keyframes waIn{from{opacity:0;transform:translateX(18px)}}
+
+/* ---------- 5 How a chatbot works ---------- */
+#s-chatbot .cb-tabs{margin:16px 0 14px;gap:12px}
+#s-chatbot .cb-tabs button{font:600 18px var(--ui);letter-spacing:0;text-transform:none;padding:10px 20px 10px 10px;display:inline-flex;align-items:center;gap:10px;color:var(--ink);background:rgba(255,255,255,.85);border:2px solid rgba(20,26,51,.14)}
+#s-chatbot .cb-tabs button i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:700}
+#s-chatbot .cb-tabs button.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+#s-chatbot .cb-tabs button.sel i{background:var(--amber);color:var(--navy)}
+#s-chatbot .cb-panes{flex:1;min-height:0;position:relative}
+#s-chatbot .pane.on{display:grid;animation:cbIn .45s cubic-bezier(.2,.9,.25,1) backwards}
+@keyframes cbIn{from{opacity:0;transform:translateY(16px)}}
+#s-chatbot .cb-pane{grid-template-columns:380px 1fr;gap:30px;padding:16px;height:100%;box-sizing:border-box}
+#s-chatbot .cb-pic{border-radius:18px;overflow:hidden;background:#E6EAFB;height:100%;display:flex;align-items:center;justify-content:center}
+#s-chatbot .cb-pic.cb-red{background:#FDE7E3}
+#s-chatbot .cb-pic .lottie{width:320px;height:320px;max-height:100%}
+#s-chatbot .cb-pic img{width:100%;height:100%;object-fit:cover;display:block}
+#s-chatbot .cb-body{display:flex;flex-direction:column;justify-content:center;padding-right:14px;min-width:0}
+#s-chatbot .sent{font-size:28px;font-weight:600;padding:14px 20px;min-height:0;background:#fff;color:var(--ink)}
+#s-chatbot .sent .cur{color:#9A5C00}
+#s-chatbot .bars{margin:8px 0 2px}
+#s-chatbot .bars .bar{font-size:21px;margin:5px 0;color:var(--ink)}
+#s-chatbot .bars .bar .w{width:110px;font-weight:700}
+#s-chatbot .bars .bar .f{height:24px;background:#C9CFEA}
+#s-chatbot .bars .bar.top .f{background:var(--teal)}
+#s-chatbot .bars .bar .p{font-size:18px;font-weight:600;color:var(--ink);width:56px}
+#s-chatbot .cb-btns{display:flex;gap:12px;margin-top:8px}
+#s-chatbot .cb-btns .btn{font-size:18px;padding:11px 22px}
+#s-chatbot .cb-btns .btn:disabled{opacity:.8;cursor:default}
+#s-chatbot .cb-say{font-size:20px;line-height:1.35;color:var(--ink);margin-top:12px}
+#s-chatbot .cb-gb{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-content:center}
+#s-chatbot .cb-h{font:700 26px var(--disp);margin-bottom:8px;padding-bottom:8px;border-bottom:4px solid var(--teal);color:var(--ink)}
+#s-chatbot .cb-h.no{border-bottom-color:var(--red)}
+#s-chatbot .gb{font-size:21px;line-height:1.3;color:var(--ink);padding:12px 0;gap:12px}
+#s-chatbot .gb .m{width:34px;height:34px;font-size:18px}
+#s-chatbot .cb-def{font-size:23px;line-height:1.35;color:var(--ink);margin:0 0 16px}
+#s-chatbot .cb-def b{color:var(--red)}
+#s-chatbot .quote{font-size:26px;line-height:1.55;background:#fff;border-radius:18px;padding:20px 24px 20px 84px;color:var(--ink)}
+#s-chatbot .quote::before{width:44px;height:44px;font-size:14px;left:22px;top:24px}
+#s-chatbot .flag{padding:0 4px;border-radius:6px}
+#s-chatbot .flag:hover{background:rgba(242,169,59,.22)}
+#s-chatbot .flag.on{background:#FFD9D3;border-bottom:3px solid var(--red);color:#8f1f16}
+#s-chatbot .cb-out{margin-top:16px;font-size:20px;line-height:1.4;font-weight:600;color:var(--ink);min-height:56px;padding:12px 16px;border-radius:14px;background:#FFF6E6;border:2px solid var(--amber)}
+#s-chatbot .cb-top{margin:0 0 14px;font-weight:600}
+#s-chatbot .cb-gb .gb{padding:9px 0}
+#s-chatbot .cb-two{grid-template-columns:1fr;padding:20px 30px}
+#s-chatbot .cb-two .cb-top{font-size:22px}
+#s-chatbot .cb-two .cb-gb{gap:34px}
+#s-chatbot .cb-col{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center}
+#s-chatbot .cb-thumb{width:150px;height:150px;border-radius:24px;display:flex;align-items:center;justify-content:center}
+#s-chatbot .cb-thumb.ok{background:#DDF4F1}
+#s-chatbot .cb-thumb.no{background:#FDE7E3}
+#s-chatbot .cb-thumb .lottie{width:130px;height:130px}
+#s-chatbot .cb-two .cb-gb{align-items:start}
+#s-chatbot .cb-col{grid-template-columns:136px 1fr;gap:18px;align-items:start}
+#s-chatbot .cb-thumb{width:136px;height:136px;margin-top:4px}
+#s-chatbot .cb-thumb .lottie{width:118px;height:118px}
+#s-chatbot .cb-col{grid-template-columns:176px 1fr;gap:20px}
+#s-chatbot .cb-thumb{width:176px;height:176px}
+#s-chatbot .cb-thumb .lottie{width:156px;height:156px}
+#s-chatbot .cb-two .gb{padding:11px 0}
+#s-chatbot .cb-two .cb-top{margin-bottom:22px}
+#s-chatbot .cb-col{grid-template-columns:160px 1fr}
+#s-chatbot .cb-thumb{width:160px;height:160px}
+#s-chatbot .cb-thumb .lottie{width:142px;height:142px}
+#s-chatbot .cb-two .gb{padding:10px 0}

@@ -1,0 +1,43 @@
+<!-- 5 HOW A CHATBOT WORKS -->
+<section class="slide" id="s-chatbot" data-notes="&lt;b&gt;4:15 to 4:28.&lt;/b&gt; Three parts; click the tabs. &lt;b&gt;1 Next word&lt;/b&gt;: like super autocomplete, it predicts what comes next, one piece at a time. Press Predict next word a few times; it never checks whether there is a cat. &lt;b&gt;2 Strengths and limits&lt;/b&gt;: good at explaining hard ideas, brainstorming, first drafts and simple code; not good at always getting facts right, knowing what is true, giving accurate sources, or replacing your judgment. &lt;b&gt;3 Hallucinations&lt;/b&gt;: false answers given confidently. Ask the room to find the three red flags in the quote, then click them. Every part is invented. That is a hallucination, and the second half of today is the cure.">
+<div class="mark"><b>Fundamentals</b><i></i><span>How it works</span></div>
+<div class="pad">
+  <div class="head"><div><div class="eyebrow">What is happening inside</div><h2>How does a chatbot work?</h2></div></div>
+  <div class="tabs cb-tabs" data-dive="cb"><button class="sel" data-p="1"><i>1</i>Next word</button><button data-p="2"><i>2</i>Strengths and limits</button><button data-p="3"><i>3</i>Hallucinations</button></div>
+  <div class="cb-panes">
+    <div class="pane on g cb-pane" data-p="1">
+      <div class="cb-pic"><div class="lottie" data-lottie="chatbot-a"></div></div>
+      <div class="cb-body">
+        <div class="sent" id="lmSent">The cat sat on the</div>
+        <div class="bars" id="lmBars" data-k="4.4"></div>
+        <div class="cb-btns"><button class="btn a" id="lmNext">Predict next word →</button><button class="btn" id="lmReset">Reset</button></div>
+        <p class="cb-say">Like super autocomplete, it predicts what comes next, one piece of text at a time.</p>
+      </div>
+    </div>
+    <div class="pane g cb-pane cb-two" data-p="2">
+      <div class="cb-body">
+        <p class="cb-say cb-top">AI can help you think and create, but it can also make mistakes.</p>
+        <div class="cb-gb"><div class="cb-col"><div class="cb-thumb ok"><div class="lottie" data-lottie="good-a"></div></div><div><div class="cb-h ok">Good at</div>
+          <div class="gb"><div class="m">✓</div><div>Explaining difficult ideas</div></div>
+          <div class="gb"><div class="m">✓</div><div>Brainstorming new ideas</div></div>
+          <div class="gb"><div class="m">✓</div><div>Making first drafts</div></div>
+          <div class="gb"><div class="m">✓</div><div>Creating simple code</div></div></div></div>
+        <div class="cb-col"><div class="cb-thumb no"><div class="lottie" data-lottie="good-a-down"></div></div><div><div class="cb-h no">Not good at</div>
+          <div class="gb"><div class="m r">!</div><div>Always getting facts right</div></div>
+          <div class="gb"><div class="m r">!</div><div>Knowing what is true</div></div>
+          <div class="gb"><div class="m r">!</div><div>Giving accurate sources</div></div>
+          <div class="gb"><div class="m r">!</div><div>Replacing your judgment</div></div></div></div></div>
+      </div>
+    </div>
+    <div class="pane g cb-pane" data-p="3">
+      <div class="cb-pic cb-red"><div class="lottie" data-lottie="hallucination-a"></div></div>
+      <div class="cb-body">
+        <p class="cb-def"><b>AI sometimes gives false answers confidently.</b> Watch for fake sources, invented quotes and oddly exact numbers.</p>
+        <div class="quote">“According to <span class="flag" data-f="Fake author: no such paper exists.">Smith (2019)</span> in the <span class="flag" data-f="Fake journal: it does not exist.">Journal of Cat Studies</span>, cats sleep <span class="flag" data-f="Oddly precise and wrong: cats sleep about 12 to 16 hours.">23.7 hours</span> a day.”</div>
+        <div id="flagOut" class="cb-out">Find the 3 red flags. Click them.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="foot"><span>Fundamentals</span><span></span><span></span></div><div class="rulebar"></div>
+</section>

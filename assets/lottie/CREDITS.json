@@ -1,0 +1,302 @@
+{
+ "prompt-a.json": {
+  "concept": "prompt",
+  "title": "Writing hand",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/270d_fe0f/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 126,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "prompt-b.json": {
+  "concept": "prompt",
+  "title": "Cat typing",
+  "source_url": "https://assets-v2.lottiefiles.com/a/6ca2e0da-c68d-11ee-ad85-1bdaabc3acb5/ZkJsgE3Xy0.lottie",
+  "page": "https://lottiefiles.com/free-animation/cat-typing-KARC3za3ij",
+  "author": "Kelly Loh",
+  "licence": "Lottie Simple License (LottieFiles free animation: free for commercial/personal use, attribution not required)",
+  "licence_url": "https://lottiefiles.com/page/license",
+  "fps": 30,
+  "frames": 150,
+  "size": [
+   500,
+   500
+  ]
+ },
+ "simulate-a.json": {
+  "concept": "simulate",
+  "title": "Rocket",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 40,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "simulate-b.json": {
+  "concept": "simulate",
+  "title": "Experiment bubbles lab",
+  "source_url": "https://assets-v2.lottiefiles.com/a/373dd298-1183-11ee-a250-cbb6acae78f7/lMbQSyYTp2.lottie",
+  "page": "https://lottiefiles.com/free-animation/experiment-bubbles-lab-JX9zXlxZvr",
+  "author": "Syed Haider Ali",
+  "licence": "Lottie Simple License (LottieFiles free animation: free for commercial/personal use, attribution not required)",
+  "licence_url": "https://lottiefiles.com/page/license",
+  "fps": 60,
+  "frames": 120,
+  "size": [
+   87,
+   75
+  ]
+ },
+ "verify-a.json": {
+  "concept": "verify",
+  "title": "Magnifying glass",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f50e/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 168,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "verify-b.json": {
+  "concept": "verify",
+  "title": "Detective search",
+  "source_url": "https://assets-v2.lottiefiles.com/a/a1ddfbb6-1177-11ee-bf69-57603472dc8a/H8i5V5mA5W.lottie",
+  "page": "https://lottiefiles.com/free-animation/detective-search-wFn55jh3nt",
+  "author": "alonoz",
+  "licence": "Lottie Simple License (LottieFiles free animation: free for commercial/personal use, attribution not required)",
+  "licence_url": "https://lottiefiles.com/page/license",
+  "fps": 60,
+  "frames": 480,
+  "size": [
+   818,
+   829
+  ]
+ },
+ "chatbot-a.json": {
+  "concept": "chatbot",
+  "title": "Robot",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f916/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 164,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "chatbot-b.json": {
+  "concept": "chatbot",
+  "title": "Thinking face",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f914/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 120,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "good-a.json": {
+  "concept": "good",
+  "title": "Thumbs up",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44d/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 72,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "good-a-down.json": {
+  "concept": "good",
+  "title": "Thumbs down (pair with good-a)",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44e/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 72,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "good-b.json": {
+  "concept": "good",
+  "title": "Check mark",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/2705/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 100,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "good-b-cross.json": {
+  "concept": "good",
+  "title": "Cross mark (pair with good-b)",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/274c/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 118,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "hallucination-a.json": {
+  "concept": "hallucination",
+  "title": "Lying face (Pinocchio nose grows)",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f925/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 138,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "hallucination-b.json": {
+  "concept": "hallucination",
+  "title": "Dizzy face (spiral eyes)",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 120,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "recipe-a.json": {
+  "concept": "recipe",
+  "title": "Cooking (frying pan)",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f373/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 132,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "recipe-b.json": {
+  "concept": "recipe",
+  "title": "Boiling pot",
+  "source_url": "https://assets-v2.lottiefiles.com/a/d5427c58-1180-11ee-a4c6-8f188d80a8a9/LHDlu8dZGi.lottie",
+  "page": "https://lottiefiles.com/free-animation/boiling-pot-Y6LrsUp2mO",
+  "author": "Nookfulloption",
+  "licence": "Lottie Simple License (LottieFiles free animation: free for commercial/personal use, attribution not required)",
+  "licence_url": "https://lottiefiles.com/page/license",
+  "fps": 30,
+  "frames": 60,
+  "size": [
+   800,
+   800
+  ]
+ },
+ "source-a.json": {
+  "concept": "source",
+  "title": "Books",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f4da/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 180,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "source-b.json": {
+  "concept": "source",
+  "title": "Book",
+  "source_url": "https://assets-v2.lottiefiles.com/a/7b3cd1e8-1187-11ee-9760-e361891f1f92/y9MJT1Q9ZH.lottie",
+  "page": "https://lottiefiles.com/free-animation/book-BuSGQCnO0K",
+  "author": "TheSub",
+  "licence": "Lottie Simple License (LottieFiles free animation: free for commercial/personal use, attribution not required)",
+  "licence_url": "https://lottiefiles.com/page/license",
+  "fps": 60,
+  "frames": 179,
+  "size": [
+   512,
+   512
+  ]
+ },
+ "celebrate-a.json": {
+  "concept": "celebrate",
+  "title": "Graduation cap",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f393/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 84,
+  "size": [
+   1024,
+   1024
+  ]
+ },
+ "celebrate-b.json": {
+  "concept": "celebrate",
+  "title": "Party popper",
+  "source_url": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f389/lottie.json",
+  "page": "https://googlefonts.github.io/noto-emoji-animation/",
+  "author": "Google (Noto Emoji Animation)",
+  "licence": "CC BY 4.0 (Google Noto Emoji Animation; attribution: \"Animated Noto Emoji by Google, CC BY 4.0\")",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fps": 60,
+  "frames": 92,
+  "size": [
+   1024,
+   1024
+  ]
+ }
+}

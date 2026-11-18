@@ -1,0 +1,19 @@
+/* Global readability baseline (projector-first). Per-slide files may go bigger, never smaller.
+   Rules: body text >= 16px, small labels >= 13px, no mid-grey text on tinted/lavender panels. */
+:root{ --muted:#343B5E; --faint:#4A5175; }
+.dark{ --muted:rgba(255,255,255,.86); --faint:rgba(255,255,255,.78); }
+.mark{font-size:13px}
+.mark b{font-size:16px}
+.eyebrow{font-size:13px;letter-spacing:.16em}
+h2{font-size:44px}
+h3{font-size:22px}
+h1 .lt,h2 .lt{font-weight:300}
+.lead{font-size:19px;line-height:1.5}
+.tile p,.li span,.ringtext .d span,.rmdetail p,.wormcard p{font-size:16.5px;line-height:1.45}
+.li{font-size:17px}.li b{font-size:17.5px}
+.note{font-size:14.5px}
+.chip{font-size:12.5px}
+.foot{font-size:12px}
+.sim-note{font-size:11.5px}
+.ctl label{font-size:14px}
+.btn{font-size:14px}
