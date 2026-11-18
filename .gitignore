@@ -6,3 +6,4 @@ assets/gpt/
 .mercury/
 *.log
 preview/
+assets/unused/
